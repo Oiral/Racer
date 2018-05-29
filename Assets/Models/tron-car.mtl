@@ -1,0 +1,231 @@
+# Blender MTL File: 'tron-car.blend'
+# Material Count: 19
+
+newmtl black
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+
+newmtl blue_bridge
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.094965 0.528948 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+
+newmtl colored_glass
+Ns 311.764706
+Ka 0.200000 0.200000 0.200000
+Kd 0.011297 0.011297 0.011297
+Ks 0.404720 0.783880 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.410601
+illum 5
+map_Kd car-normalmap.png
+map_Bump car-bumpmap.png
+map_Ke C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\share\\glow-fake-reflect-hd.png
+refl C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\share\\glow-fake-reflect-hd.png
+
+newmtl glass
+Ns 370.588235
+Ka 0.200000 0.200000 0.200000
+Kd 0.020640 0.032517 0.036989
+Ks 0.404720 0.783880 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.583168
+illum 3
+map_Kd car-normalmap.png
+map_Bump car-bumpmap.png
+map_Ks -s 4.000000 2.400000 1.000000 C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\materials\\Tileable_metal_scratch_rust_texture_SPECULAR.jpg
+refl C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\share\\glow-fake-reflect-hd.png
+
+newmtl glass_NONE
+Ns 370.588235
+Ka 0.200000 0.200000 0.200000
+Kd 0.020640 0.032517 0.036989
+Ks 0.404720 0.783880 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.583168
+illum 3
+map_Bump car-bumpmap.png
+map_Kd -s 4.000000 2.400000 1.000000 C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\materials\\Tileable_metal_scratch_rust_texture_SPECULAR.jpg
+map_Ks -s 4.000000 2.400000 1.000000 C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\materials\\Tileable_metal_scratch_rust_texture_SPECULAR.jpg
+refl C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\share\\glow-fake-reflect-hd.png
+
+newmtl glass_occlusion
+Ns 370.588235
+Ka 0.200000 0.200000 0.200000
+Kd 0.020640 0.032517 0.036989
+Ks 0.404720 0.783880 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.583168
+illum 3
+map_Bump car-bumpmap.png
+map_Kd -s 4.000000 2.400000 1.000000 C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\materials\\Tileable_metal_scratch_rust_texture_SPECULAR.jpg
+map_Ks -s 4.000000 2.400000 1.000000 C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\materials\\Tileable_metal_scratch_rust_texture_SPECULAR.jpg
+refl C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\share\\glow-fake-reflect-hd.png
+
+newmtl high_way_bridge_base
+Ns 194.117647
+Ka 1.000000 1.000000 1.000000
+Kd 0.013910 0.026482 0.026482
+Ks 0.203448 0.203448 0.203448
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd repo\\textures\\materials\\Seamless_travertine_texture_DIFFUSE.jpg
+map_Ks repo\\textures\\materials\\Tileable_metal_scratch _texture_SPECULAR.jpg
+
+newmtl high_way_bridge_floor
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.005828 0.008411 0.009091
+Ks 0.033333 0.033333 0.033333
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Ks repo\\textures\\materials\\Tileable_metal_scratch_rust_texture_SPECULAR.jpg
+refl -o 0.000000 1.700000 0.000000 -s 2.200000 1.000000 1.000000 repo\\textures\\share\\glow-fake-reflect-hd.png
+
+newmtl high_way_bridge_floor_circles
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.111129 0.611890 0.800000
+Ks 0.033333 0.033333 0.033333
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd repo\\textures\\bridge\\circle_side.png
+
+newmtl interior
+Ns 37.254902
+Ka 1.000000 1.000000 1.000000
+Kd 0.011297 0.011297 0.011297
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump car-bumpmap.png
+
+newmtl interior_occlusion
+Ns 37.254902
+Ka 1.000000 1.000000 1.000000
+Kd 0.011297 0.011297 0.011297
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump car-bumpmap.png
+
+newmtl light
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.050545 0.651054 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.055599 0.716159 1.100000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd car-normalmap.png
+
+newmtl light_NONE
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.050545 0.651054 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.055599 0.716159 1.100000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl light_occlusion
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.050545 0.651054 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.055599 0.716159 1.100000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl plastic
+Ns 37.254902
+Ka 1.000000 1.000000 1.000000
+Kd 0.011297 0.011297 0.011297
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd car-normalmap.png
+map_Bump car-bumpmap.png
+
+newmtl steel
+Ns 96.078431
+Ka 0.100000 0.100000 0.100000
+Kd 0.004608 0.004608 0.004608
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 5
+map_Kd car-emit.png
+map_Bump car-bumpmap.png
+map_Ke C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\share\\glow-fake-reflect-hd.png
+refl C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\share\\glow-fake-reflect-hd.png
+
+newmtl steel_2
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.053779 0.053779 0.053779
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd car-normalmap.png
+map_Bump car-bumpmap.png
+map_Ke car-emit.png
+
+newmtl steel_normalmap
+Ns 96.078431
+Ka 0.100000 0.100000 0.100000
+Kd 0.004608 0.004608 0.004608
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 5
+map_Kd car-normalmap.png
+map_Bump car-bumpmap.png
+map_Ke C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\share\\glow-fake-reflect-hd.png
+refl C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\share\\glow-fake-reflect-hd.png
+
+newmtl wheel
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.441224 0.441224 0.441224
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\materials\\Tileable_metal_scratch_rust_texture_SPECULAR.jpg
+map_Ks C:\\Users\\hamis\\Desktop\\Tron_Car\\repo\\textures\\materials\\Tileable_metal_scratch_rust_texture_SPECULAR.jpg
