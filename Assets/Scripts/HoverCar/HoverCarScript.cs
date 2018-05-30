@@ -1,23 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class HoverCarScript : MonoBehaviour {
 
     Rigidbody rb;
+    [Header("Info")]
     public float deadZone = 0.1f;
+    public float speed;
+    public Text speedoText;
+
 
     [Header("Brake and Acceleration")]
     public float forwardAcl = 100f;
     public float backwardAcl = 25f;
     float currThrust = 0f;
 
-
     [Header("Drag")]
     public float dragForceDead = 2f;
     public float dragForceActive = 0.5f;
-
 
     [Header("Turning")]
     public float turnStrength = 10f;
@@ -60,6 +63,7 @@ public class HoverCarScript : MonoBehaviour {
         {
             currTurn = turnAxis;
         }
+        currTurn = Mathf.Sign(currThrust) * currTurn;
 	}
 
     private void FixedUpdate()
@@ -106,7 +110,9 @@ public class HoverCarScript : MonoBehaviour {
             rb.AddForce(-Vector3.up * 50 , ForceMode.Acceleration);
         }
 
-
-
+        Vector3 vel = rb.velocity;
+        vel.y = 0;
+        speed = vel.magnitude;
+        speedoText.text = Mathf.RoundToInt(speed).ToString() + " m/s";
     }
 }

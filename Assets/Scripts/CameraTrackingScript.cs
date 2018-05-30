@@ -27,28 +27,26 @@ public class CameraTrackingScript : MonoBehaviour {
         }
         else
         {
+            /*
             Quaternion zOnlyRot = Quaternion.Euler(new Vector3(transform.position.x, transform.position.y,Target.transform.rotation.eulerAngles.z));
             transform.rotation = Quaternion.Lerp(transform.rotation, zOnlyRot, zRotStiffness * Time.deltaTime);
             Quaternion xOnlyRot = Quaternion.Euler(new Vector3(Target.transform.rotation.eulerAngles.x, transform.position.y, transform.position.z));
             transform.rotation = Quaternion.Lerp(transform.rotation, xOnlyRot, xRotStiffness * Time.deltaTime);
             Quaternion yOnlyRot = Quaternion.Euler(new Vector3(transform.position.x, Target.transform.rotation.eulerAngles.y, transform.position.z));
             transform.rotation = Quaternion.Lerp(transform.rotation, yOnlyRot, yRotStiffness * Time.deltaTime);
-            /*
+            */
+            
             Vector3 currRotEuler = transform.rotation.eulerAngles;
             Vector3 targetRotEuler = Target.transform.rotation.eulerAngles;
 
-            float xRot = Mathf.Lerp(currRotEuler.x, targetRotEuler.x, xRotStiffness * Time.deltaTime);
-            float yRot = Mathf.Lerp(currRotEuler.y, targetRotEuler.y, yRotStiffness * Time.deltaTime);
-            float zRot = Mathf.Lerp(currRotEuler.z, targetRotEuler.z, zRotStiffness * Time.deltaTime);
-
-            xRot = ((xRot - 180) % 360) + 180;
-            yRot = ((yRot - 180) % 360) + 180;
-            zRot = ((zRot - 180) % 360) + 180;
+            float xRot = Mathf.LerpAngle(currRotEuler.x, targetRotEuler.x, xRotStiffness * Time.deltaTime);
+            float yRot = Mathf.LerpAngle(currRotEuler.y, targetRotEuler.y, yRotStiffness * Time.deltaTime);
+            float zRot = Mathf.LerpAngle(currRotEuler.z, targetRotEuler.z, zRotStiffness * Time.deltaTime);
 
             currRotEuler = new Vector3(xRot, yRot, zRot);
 
             transform.rotation = Quaternion.Euler(currRotEuler);
-            */
+            
         }
     }
 }

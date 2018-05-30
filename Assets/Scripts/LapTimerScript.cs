@@ -22,6 +22,8 @@ public class LapTimerScript : MonoBehaviour {
     {
         if (raceGoing)
         {
+            Debug.Log("Lap number: " + lapCount + " | Lap Time: " + lapTimer);
+
             lapTimes.Add(lapCount, lapTimer);
             lapTimer = 0;
             lapCount += 1;
