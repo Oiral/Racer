@@ -6,38 +6,51 @@ using UnityEngine;
 public class HoverCarScript : MonoBehaviour {
 
     Rigidbody rb;
-    float deadZone;
+    public float deadZone = 0.1f;
 
+    [Header("Brake and Acceleration")]
     public float forwardAcl = 100f;
     public float backwardAcl = 25f;
     float currThrust = 0f;
 
+
+    [Header("Drag")]
+    public float dragForceDead = 2f;
+    public float dragForceActive = 0.5f;
+
+
+    [Header("Turning")]
     public float turnStrength = 10f;
     public float turnWeaveStrength = 1f;
     float currTurn = 0f;
 
-    int layerMask;
-    public float hoverForce = 9f;
+    [Header("Hovers")]
+    //public float hoverForce = 9f;
     public float hoverHeight = 2f;
+    int layerMask;
     public GameObject[] hoverPoints;
+
     
-	void Start () {
+    void Start () {
         rb = GetComponent<Rigidbody>();
 
         layerMask = 1 << LayerMask.NameToLayer("Car");
         layerMask = ~layerMask;
 	}
 	
-	void Update () {
+	void Update() {
+        rb.drag = dragForceDead;
         //Main Thrust
         currThrust = 0f;
         float aclAxis = Input.GetAxis("Vertical");
         if (aclAxis > deadZone)
         {
             currThrust = aclAxis * forwardAcl;
-        }else if (aclAxis < deadZone)
+            rb.drag = dragForceActive;
+        }else if (aclAxis < -deadZone)
         {
             currThrust = aclAxis * backwardAcl;
+            rb.drag = dragForceActive;
         }
 
         //Turning
@@ -66,23 +79,31 @@ public class HoverCarScript : MonoBehaviour {
 
         //Hovers
         RaycastHit hit;
+        bool onGround = false;
         for (int i = 0; i < hoverPoints.Length; i++)
         {
+            float hoverForce = hoverPoints[i].GetComponent<ThrusterScript>().hoverForce;
             var hoverPoint = hoverPoints[i];
             if (Physics.Raycast(hoverPoint.transform.position,-Vector3.up,out hit, hoverHeight, layerMask))
             {
                 rb.AddForceAtPosition(Vector3.up * hoverForce * (1 - (hit.distance / hoverHeight)), hoverPoint.transform.position);
+                onGround = true;
             }else
             {
                 if (transform.position.y > hoverPoint.transform.position.y)
                 {
-                    rb.AddForceAtPosition(hoverPoint.transform.up * hoverForce/2, hoverPoint.transform.position);
+                    rb.AddForceAtPosition(hoverPoint.transform.up * hoverForce/3, hoverPoint.transform.position);
                 }
                 else
                 {
-                    rb.AddForceAtPosition(hoverPoint.transform.up * -hoverForce/2, hoverPoint.transform.position);
+                    rb.AddForceAtPosition(hoverPoint.transform.up * -hoverForce/3, hoverPoint.transform.position);
                 }
             }
+        }
+        //Make the car fall faster
+        if (!onGround)
+        {
+            rb.AddForce(-Vector3.up * 50 , ForceMode.Acceleration);
         }
 
 
