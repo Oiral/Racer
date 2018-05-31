@@ -12,7 +12,6 @@ public class HoverCarScript : MonoBehaviour {
     public float speed;
     public Text speedoText;
 
-
     [Header("Brake and Acceleration")]
     public float forwardAcl = 100f;
     public float backwardAcl = 25f;
@@ -26,6 +25,8 @@ public class HoverCarScript : MonoBehaviour {
     public float turnStrength = 10f;
     public float turnWeaveStrength = 1f;
     float currTurn = 0f;
+    public GameObject turnPlate;
+    public float turnPlateForce = 100f;
 
     [Header("Hovers")]
     //public float hoverForce = 9f;
@@ -71,36 +72,61 @@ public class HoverCarScript : MonoBehaviour {
         //Forward
         if (Mathf.Abs(currThrust) > 0)
         {
-            rb.AddForce(transform.forward * currThrust);
+            float forceToAdd;
+
+            forceToAdd = Mathf.Pow(0.1f * currThrust - 2, 3) + 9;
+
+            rb.AddForce(transform.forward * forceToAdd);
         }
 
         //Turning
         if (currTurn != 0)
         {
-            rb.AddRelativeTorque(Vector3.up * currTurn * turnStrength);
-            rb.AddRelativeTorque(Vector3.forward * -currTurn * turnWeaveStrength);
+            if (turnPlate == null)
+            {
+                rb.AddRelativeTorque(Vector3.up * currTurn * turnStrength);
+                rb.AddRelativeTorque(Vector3.forward * -currTurn * turnWeaveStrength);
+            }
+            else
+            {
+                rb.AddForceAtPosition(Mathf.Sign(currTurn) * -transform.right * turnPlateForce, turnPlate.transform.position);
+            }
         }
+
+
 
         //Hovers
         RaycastHit hit;
         bool onGround = false;
+
+        RaycastHit carHit;
+        Vector3 relativeVector = new Vector3(0,1,0);
+        if (Physics.Raycast(transform.position,-Vector3.up,out carHit, 20, layerMask))
+        {
+            relativeVector = carHit.normal;
+        }
+
         for (int i = 0; i < hoverPoints.Length; i++)
         {
             float hoverForce = hoverPoints[i].GetComponent<ThrusterScript>().hoverForce;
             var hoverPoint = hoverPoints[i];
+
+            Vector3 hoverPointPos = hoverPoint.transform.position;
+            hoverPointPos = hoverPointPos - relativeVector;
+
             if (Physics.Raycast(hoverPoint.transform.position,-Vector3.up,out hit, hoverHeight, layerMask))
             {
-                rb.AddForceAtPosition(Vector3.up * hoverForce * (1 - (hit.distance / hoverHeight)), hoverPoint.transform.position);
+                rb.AddForceAtPosition(relativeVector * hoverForce * (1 - (hit.distance / hoverHeight)), hoverPoint.transform.position);
                 onGround = true;
             }else
             {
-                if (transform.position.y > hoverPoint.transform.position.y)
+                if ((transform.position - relativeVector).y > hoverPointPos.y)
                 {
-                    rb.AddForceAtPosition(hoverPoint.transform.up * hoverForce/3, hoverPoint.transform.position);
+                    rb.AddForceAtPosition(relativeVector * hoverForce/3, hoverPoint.transform.position);
                 }
                 else
                 {
-                    rb.AddForceAtPosition(hoverPoint.transform.up * -hoverForce/3, hoverPoint.transform.position);
+                    rb.AddForceAtPosition(relativeVector * -hoverForce/3, hoverPoint.transform.position);
                 }
             }
         }
@@ -115,4 +141,5 @@ public class HoverCarScript : MonoBehaviour {
         speed = vel.magnitude;
         speedoText.text = Mathf.RoundToInt(speed).ToString() + " m/s";
     }
+    
 }
