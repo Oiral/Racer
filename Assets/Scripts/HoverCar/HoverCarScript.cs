@@ -43,10 +43,11 @@ public class HoverCarScript : MonoBehaviour {
 	}
 	
 	void Update() {
+
         rb.drag = dragForceDead;
         //Main Thrust
         currThrust = 0f;
-        float aclAxis = Input.GetAxis("Vertical");
+        float aclAxis = ControllerMapping.TriggerAxis();
         if (aclAxis > deadZone)
         {
             currThrust = aclAxis * forwardAcl;
@@ -84,7 +85,14 @@ public class HoverCarScript : MonoBehaviour {
         {
             if (turnPlate == null)
             {
-                rb.AddRelativeTorque(Vector3.up * currTurn * turnStrength);
+                //rb.AddTorque(Vector3.up * currTurn * turnStrength);
+                float zRot = transform.rotation.eulerAngles.z;
+                if (zRot > 180)
+                {
+                    zRot = 360 - zRot;
+                }
+
+                rb.AddRelativeTorque(Vector3.up * currTurn * turnStrength * (1 * (zRot/30) + 1));
                 rb.AddRelativeTorque(Vector3.forward * -currTurn * turnWeaveStrength);
             }
             else
