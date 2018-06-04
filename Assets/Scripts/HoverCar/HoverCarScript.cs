@@ -11,11 +11,13 @@ public class HoverCarScript : MonoBehaviour {
     public float deadZone = 0.1f;
     public float speed;
     public Text speedoText;
+    public bool isPlayer = true;
 
     [Header("Brake and Acceleration")]
     public float forwardAcl = 100f;
     public float backwardAcl = 25f;
-    float currThrust = 0f;
+    [HideInInspector]
+    public float currThrust = 0f;
 
     [Header("Drag")]
     public float dragForceDead = 2f;
@@ -24,7 +26,8 @@ public class HoverCarScript : MonoBehaviour {
     [Header("Turning")]
     public float turnStrength = 10f;
     public float turnWeaveStrength = 1f;
-    float currTurn = 0f;
+    [HideInInspector]
+    public float currTurn = 0f;
     public GameObject turnPlate;
     public float turnPlateForce = 100f;
 
@@ -44,28 +47,32 @@ public class HoverCarScript : MonoBehaviour {
 	
 	void Update() {
 
-        rb.drag = dragForceDead;
-        //Main Thrust
-        currThrust = 0f;
-        float aclAxis = ControllerMapping.TriggerAxis();
-        if (aclAxis > deadZone)
+        if (isPlayer)
         {
-            currThrust = aclAxis * forwardAcl;
-            rb.drag = dragForceActive;
-        }else if (aclAxis < -deadZone)
-        {
-            currThrust = aclAxis * backwardAcl;
-            rb.drag = dragForceActive;
-        }
+            rb.drag = dragForceDead;
+            //Main Thrust
+            currThrust = 0f;
+            float aclAxis = ControllerMapping.TriggerAxis();
+            if (aclAxis > deadZone)
+            {
+                currThrust = aclAxis * forwardAcl;
+                rb.drag = dragForceActive;
+            }
+            else if (aclAxis < -deadZone)
+            {
+                currThrust = aclAxis * backwardAcl;
+                rb.drag = dragForceActive;
+            }
 
-        //Turning
-        currTurn = 0f;
-        float turnAxis = Input.GetAxis("Horizontal");
-        if (Mathf.Abs(turnAxis) > deadZone)
-        {
-            currTurn = turnAxis;
+            //Turning
+            currTurn = 0f;
+            float turnAxis = ControllerMapping.HorizontalMovement();
+            if (Mathf.Abs(turnAxis) > deadZone)
+            {
+                currTurn = turnAxis;
+            }
+            currTurn = Mathf.Sign(currThrust) * currTurn;
         }
-        currTurn = Mathf.Sign(currThrust) * currTurn;
 	}
 
     private void FixedUpdate()
@@ -147,7 +154,10 @@ public class HoverCarScript : MonoBehaviour {
         Vector3 vel = rb.velocity;
         vel.y = 0;
         speed = vel.magnitude;
-        speedoText.text = Mathf.RoundToInt(speed).ToString() + " m/s";
+        if (speedoText != null)
+        {
+            speedoText.text = Mathf.RoundToInt(speed).ToString() + " m/s";
+        }
     }
     
 }
