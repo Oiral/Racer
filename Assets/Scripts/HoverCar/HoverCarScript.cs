@@ -34,15 +34,15 @@ public class HoverCarScript : MonoBehaviour {
     [Header("Hovers")]
     //public float hoverForce = 9f;
     public float hoverHeight = 2f;
-    int layerMask;
+    public LayerMask layerMask;
     public GameObject[] hoverPoints;
 
     
     void Start () {
         rb = GetComponent<Rigidbody>();
 
-        layerMask = 1 << LayerMask.NameToLayer("Car");
-        layerMask = ~layerMask;
+        //layerMask = 1 << LayerMask.NameToLayer("Car");
+        //layerMask = ~layerMask;
 	}
 	
 	void Update() {

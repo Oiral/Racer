@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4848529049734248}
   - component: {fileID: 33819418312964582}
   - component: {fileID: 23736498262670782}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 136458085947739856}
   - component: {fileID: 114671785254485244}
   - component: {fileID: 114430783312354214}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4673039666868046}
   - component: {fileID: 114080311333767546}
   - component: {fileID: 65080335302532358}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Hover 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4173340633278972}
   - component: {fileID: 114529226197783544}
   - component: {fileID: 65208988253735756}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Hover 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4813000668529460}
   - component: {fileID: 114393047767191718}
   - component: {fileID: 65889711250036252}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Hover 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4777419765711584}
   - component: {fileID: 114812391047529004}
   - component: {fileID: 65062642190179976}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Hover 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4938403177534406}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: CamFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244889680683778}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.1, y: 0.5, z: 0.41}
+  m_LocalPosition: {x: -13.41, y: 0.5, z: -1.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4848529049734248}
@@ -400,6 +400,9 @@ MonoBehaviour:
   turnPlate: {fileID: 0}
   turnPlateForce: 1500
   hoverHeight: 1.5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294966527
   hoverPoints:
   - {fileID: 1334229248561248}
   - {fileID: 1867842837931532}

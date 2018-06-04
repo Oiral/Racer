@@ -6,7 +6,7 @@ public enum Controllers { Disconected, Keyboard, ps4_controller, wired_xbox_360_
 
 public static class ControllerMapping{
 
-    public static Controllers currentController = Controllers.Keyboard;
+    public static Controllers currentController = Controllers.ps4_controller;
 
     public static void SetControllers()
     {
@@ -16,6 +16,12 @@ public static class ControllerMapping{
             {
                 case 19:
                     currentController = Controllers.ps4_controller;
+                    break;
+                case 52:
+                    currentController = Controllers.wireless_xbox_360_controller;
+                    break;
+                default:
+                    currentController = Controllers.Keyboard;
                     break;
             }
         }
@@ -37,10 +43,12 @@ public static class ControllerMapping{
                 //leftTrigger = -((leftTrigger + 1) / 2);
                 //Debug.Log("PS4 :" + (rightTrigger + leftTrigger).ToString());
                 return (rightTrigger + leftTrigger);
+                
+            
+            case Controllers.wireless_xbox_360_controller:
+                return (Input.GetAxis("xbox_360_Wireless_Triggers"));
                 /*
             case Controllers.wired_xbox_360_controller:
-                break;
-            case Controllers.wireless_xbox_360_controller:
                 break;
             case Controllers.xbox_one_controller:
                 break;*/

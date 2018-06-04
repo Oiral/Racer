@@ -42,6 +42,19 @@ public class RaceCourse : MonoBehaviour {
             Gizmos.DrawSphere(currentNode, 1);
         }
     }
+    private void OnDrawGizmosSelected()
+    {
+        Transform[] pathTransfrom = GetComponentsInChildren<Transform>();
+        nodes = new List<Transform>();
 
-    
+        for (int i = 0; i < pathTransfrom.Length; i++)
+        {
+            if (pathTransfrom[i] != transform)
+            {
+                nodes.Add(pathTransfrom[i]);
+                pathTransfrom[i].name = "node (" + (i-1).ToString() + ")";
+            }
+        }
+    }
+
 }

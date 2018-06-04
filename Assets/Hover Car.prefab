@@ -317,8 +317,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1049612252296170}
-  m_LocalRotation: {x: -0, y: -0.707106, z: -0, w: 0.7071076}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4095929561728780}
@@ -638,15 +638,21 @@ MonoBehaviour:
   deadZone: 0.2
   speed: 0
   speedoText: {fileID: 114297821836039066}
+  isPlayer: 1
   forwardAcl: 250
   backwardAcl: 150
+  currThrust: 0
   dragForceDead: 0.8
   dragForceActive: 2
   turnStrength: 1500
   turnWeaveStrength: 200
+  currTurn: 0
   turnPlate: {fileID: 0}
   turnPlateForce: 1500
   hoverHeight: 1.5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294966527
   hoverPoints:
   - {fileID: 1919688696992354}
   - {fileID: 1726339993719656}

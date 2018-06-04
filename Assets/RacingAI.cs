@@ -46,7 +46,7 @@ public class RacingAI : MonoBehaviour {
 
     void Drive()
     {
-        hoverScript.currThrust = (1 - (Mathf.Sign(steering) * steering)) * hoverScript.forwardAcl;
+        hoverScript.currThrust = Mathf.Lerp(hoverScript.currThrust, (((1 - (Mathf.Sign(steering) * steering)) + (Mathf.Sign(steering) * steering)/4) * hoverScript.forwardAcl), 0.05f);
     }
 
     void CheckWaypoint()
