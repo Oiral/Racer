@@ -99,7 +99,7 @@ public class HoverCarScript : MonoBehaviour {
                     zRot = 360 - zRot;
                 }
 
-                rb.AddRelativeTorque(Vector3.up * currTurn * turnStrength * (1 * (zRot/30) + 1));
+                rb.AddRelativeTorque(Vector3.up * currTurn * turnStrength  *(1 * (zRot/30) + 1));
                 rb.AddRelativeTorque(Vector3.forward * -currTurn * turnWeaveStrength);
             }
             else

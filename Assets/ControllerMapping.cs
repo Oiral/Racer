@@ -6,7 +6,7 @@ public enum Controllers { Disconected, Keyboard, ps4_controller, wired_xbox_360_
 
 public static class ControllerMapping{
 
-    public static Controllers currentController = Controllers.ps4_controller;
+    public static Controllers currentController = Controllers.Keyboard;
 
     public static void SetControllers()
     {
