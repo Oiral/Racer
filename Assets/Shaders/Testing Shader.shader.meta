@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 9483885339d17e14d86d83169490a5c8
+timeCreated: 1528164533
+licenseType: Free
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _XYtexture: {fileID: 2800000, guid: 5302278195dca44468a5e3b05cb33243, type: 3}
+  - _XZtexture: {fileID: 2800000, guid: 5302278195dca44468a5e3b05cb33243, type: 3}
+  - _YZtexture: {fileID: 2800000, guid: 5302278195dca44468a5e3b05cb33243, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

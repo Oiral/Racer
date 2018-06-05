@@ -36,8 +36,9 @@ public class HoverCarScript : MonoBehaviour {
     public float hoverHeight = 2f;
     public LayerMask layerMask;
     public GameObject[] hoverPoints;
+    public float stability = 0.3f;
+    public float stabilitySpeed = 2.0f;
 
-    
     void Start () {
         rb = GetComponent<Rigidbody>();
 
@@ -127,13 +128,12 @@ public class HoverCarScript : MonoBehaviour {
             var hoverPoint = hoverPoints[i];
 
             Vector3 hoverPointPos = hoverPoint.transform.position;
-            hoverPointPos = hoverPointPos - relativeVector;
 
             if (Physics.Raycast(hoverPoint.transform.position,-Vector3.up,out hit, hoverHeight, layerMask))
             {
-                rb.AddForceAtPosition(relativeVector * hoverForce * (1 - (hit.distance / hoverHeight)), hoverPoint.transform.position);
+                rb.AddForceAtPosition(carHit.normal * hoverForce * (1 - (hit.distance / hoverHeight)), hoverPoint.transform.position);
                 onGround = true;
-            }else
+            }/*else
             {
                 if ((transform.position - relativeVector).y > hoverPointPos.y)
                 {
@@ -143,12 +143,14 @@ public class HoverCarScript : MonoBehaviour {
                 {
                     rb.AddForceAtPosition(relativeVector * -hoverForce/3, hoverPoint.transform.position);
                 }
-            }
+            }*/
         }
         //Make the car fall faster
         if (!onGround)
         {
             rb.AddForce(-Vector3.up * 50 , ForceMode.Acceleration);
+            //Stability
+            
         }
 
         Vector3 vel = rb.velocity;
@@ -158,6 +160,10 @@ public class HoverCarScript : MonoBehaviour {
         {
             speedoText.text = Mathf.RoundToInt(speed).ToString() + " m/s";
         }
+
+        Vector3 predictedUp = Quaternion.AngleAxis(rb.angularVelocity.magnitude * Mathf.Rad2Deg * stability / stabilitySpeed, rb.angularVelocity) * transform.up;
+        Vector3 torqueVector = Vector3.Cross(predictedUp, carHit.normal);
+        rb.AddTorque(torqueVector * stabilitySpeed * stabilitySpeed);
     }
     
 }
