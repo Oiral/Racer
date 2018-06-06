@@ -47,11 +47,21 @@ public class RacingAI : MonoBehaviour {
     void Drive()
     {
         hoverScript.currThrust = Mathf.Lerp(hoverScript.currThrust, (((1 - (Mathf.Sign(steering) * steering)) + (Mathf.Sign(steering) * steering)/4) * hoverScript.forwardAcl), 0.05f);
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (hoverScript.currThrust < 100)
+        {
+            rb.drag = hoverScript.dragForceDead;
+            Debug.Log("Less drag force");
+        }
+        else
+        {
+            rb.drag = hoverScript.dragForceActive;
+        }
     }
 
     void CheckWaypoint()
     {
-        if (Vector3.Distance(transform.position, nodes[currentNode].position) < 10f)
+        if (Vector3.Distance(transform.position, nodes[currentNode].position) < 15f)
         {
             if (currentNode == nodes.Count - 1)
             {

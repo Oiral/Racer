@@ -159,6 +159,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d657db2baae7ab34381bdbd3889783bc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &516176787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 516176789}
+  - component: {fileID: 516176788}
+  m_Layer: 0
+  m_Name: Controller Mapping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &516176788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 516176787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b340712f9858ac4e88461912965bbb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentController: 1
+--- !u!4 &516176789
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 516176787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.41, y: 3.6291633, z: -1.2399998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &735188935
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +226,7 @@ Transform:
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 1323645441}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20, y: -148.22601, z: 0}
 --- !u!1 &779123852
 GameObject:
@@ -213,7 +254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1323645441}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 20, y: -209.50099, z: 0}
 --- !u!1 &837353526
 GameObject:
@@ -410,6 +451,8 @@ MonoBehaviour:
   camNodes: []
   menuSlots: {fileID: 1323645441}
   camTracking: {fileID: 1846450059}
+  coolDownTime: 1
+  onCoolDown: 0
 --- !u!114 &1323645440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,9 +476,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 779123853}
-  - {fileID: 899285335}
   - {fileID: 735188936}
+  - {fileID: 899285335}
+  - {fileID: 779123853}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

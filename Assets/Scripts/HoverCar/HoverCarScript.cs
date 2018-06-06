@@ -28,8 +28,8 @@ public class HoverCarScript : MonoBehaviour {
     public float turnWeaveStrength = 1f;
     [HideInInspector]
     public float currTurn = 0f;
-    public GameObject turnPlate;
-    public float turnPlateForce = 100f;
+    //public GameObject turnPlate;
+    //public float turnPlateForce = 100f;
 
     [Header("Hovers")]
     //public float hoverForce = 9f;
@@ -40,7 +40,6 @@ public class HoverCarScript : MonoBehaviour {
     
     void Start () {
         rb = GetComponent<Rigidbody>();
-
         //layerMask = 1 << LayerMask.NameToLayer("Car");
         //layerMask = ~layerMask;
 	}
@@ -52,7 +51,7 @@ public class HoverCarScript : MonoBehaviour {
             rb.drag = dragForceDead;
             //Main Thrust
             currThrust = 0f;
-            float aclAxis = ControllerMapping.TriggerAxis();
+            float aclAxis = ControllerMapping.instance.TriggerAxis();
             if (aclAxis > deadZone)
             {
                 currThrust = aclAxis * forwardAcl;
@@ -66,7 +65,7 @@ public class HoverCarScript : MonoBehaviour {
 
             //Turning
             currTurn = 0f;
-            float turnAxis = ControllerMapping.HorizontalMovement();
+            float turnAxis = ControllerMapping.instance.HorizontalMovement();
             if (Mathf.Abs(turnAxis) > deadZone)
             {
                 currTurn = turnAxis;
@@ -90,23 +89,17 @@ public class HoverCarScript : MonoBehaviour {
         //Turning
         if (currTurn != 0)
         {
-            if (turnPlate == null)
+            //rb.AddTorque(Vector3.up * currTurn * turnStrength);
+            float zRot = transform.rotation.eulerAngles.z;
+            if (zRot > 180)
             {
-                //rb.AddTorque(Vector3.up * currTurn * turnStrength);
-                float zRot = transform.rotation.eulerAngles.z;
-                if (zRot > 180)
-                {
-                    zRot = 360 - zRot;
-                }
+                zRot = 360 - zRot;
+            }
 
-                rb.AddRelativeTorque(Vector3.up * currTurn * turnStrength  *(1 * (zRot/30) + 1));
-                rb.AddRelativeTorque(Vector3.forward * -currTurn * turnWeaveStrength);
-            }
-            else
-            {
-                rb.AddForceAtPosition(Mathf.Sign(currTurn) * -transform.right * turnPlateForce, turnPlate.transform.position);
-            }
+            rb.AddRelativeTorque(Vector3.up * currTurn * turnStrength * (1 * (zRot / 30) + 1));
+            rb.AddRelativeTorque(Vector3.forward * -currTurn * turnWeaveStrength);
         }
+        
 
 
 
@@ -114,46 +107,53 @@ public class HoverCarScript : MonoBehaviour {
         RaycastHit hit;
         bool onGround = false;
 
-        RaycastHit carHit;
-        Vector3 relativeVector = new Vector3(0,1,0);
-        if (Physics.Raycast(transform.position,-Vector3.up,out carHit, 20, layerMask))
-        {
-            relativeVector = carHit.normal;
-        }
-
+        //Get each hover
         for (int i = 0; i < hoverPoints.Length; i++)
         {
-            float hoverForce = hoverPoints[i].GetComponent<ThrusterScript>().hoverForce;
+            
             var hoverPoint = hoverPoints[i];
+            float hoverForce = hoverPoint.GetComponent<ThrusterScript>().hoverForce;
 
+            //Find the relative height of the hover releative to the body of the car and the normal of the base of the car
             Vector3 hoverPointPos = hoverPoint.transform.position;
-            hoverPointPos = hoverPointPos - relativeVector;
 
             if (Physics.Raycast(hoverPoint.transform.position,-Vector3.up,out hit, hoverHeight, layerMask))
             {
-                rb.AddForceAtPosition(relativeVector * hoverForce * (1 - (hit.distance / hoverHeight)), hoverPoint.transform.position);
+                //if the hovers are near the ground
+                rb.AddForceAtPosition(transform.up * hoverForce * (1 - (hit.distance / hoverHeight)), 
+                    hoverPoint.transform.position);
+
+                //Set this for later use
                 onGround = true;
             }else
             {
-                if ((transform.position - relativeVector).y > hoverPointPos.y)
+                if (transform.position.y > hoverPointPos.y)
                 {
-                    rb.AddForceAtPosition(relativeVector * hoverForce/3, hoverPoint.transform.position);
+                    //If the hovers are off the ground but are lower than the main body of the car
+                    rb.AddForceAtPosition(transform.up * hoverForce/3, 
+                        hoverPoint.transform.position);
                 }
                 else
                 {
-                    rb.AddForceAtPosition(relativeVector * -hoverForce/3, hoverPoint.transform.position);
+                    //If the hovers are off the ground but are higher than the main body of the car
+                    rb.AddForceAtPosition(transform.up * -hoverForce/3, 
+                        hoverPoint.transform.position);
                 }
             }
         }
-        //Make the car fall faster
+
+        //Make the car fall faster if its not on the ground
         if (!onGround)
         {
             rb.AddForce(-Vector3.up * 50 , ForceMode.Acceleration);
         }
 
+
+        //Find the speed of the car
         Vector3 vel = rb.velocity;
         vel.y = 0;
         speed = vel.magnitude;
+        //Display the speed of the text to the UI
         if (speedoText != null)
         {
             speedoText.text = Mathf.RoundToInt(speed).ToString() + " m/s";

@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70683093f33f2b48a7273e8d61b3a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForce: 1200
+  hoverForce: 2000
 --- !u!114 &114393047767191718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70683093f33f2b48a7273e8d61b3a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForce: 1200
+  hoverForce: 2000
 --- !u!114 &114430783312354214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -397,8 +397,6 @@ MonoBehaviour:
   turnStrength: 1500
   turnWeaveStrength: 200
   currTurn: 0
-  turnPlate: {fileID: 0}
-  turnPlateForce: 1500
   hoverHeight: 1.5
   layerMask:
     serializedVersion: 2
@@ -419,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70683093f33f2b48a7273e8d61b3a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForce: 1200
+  hoverForce: 2000
 --- !u!114 &114671785254485244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -445,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70683093f33f2b48a7273e8d61b3a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForce: 1200
+  hoverForce: 2000
 --- !u!136 &136291290904068590
 CapsuleCollider:
   m_ObjectHideFlags: 1

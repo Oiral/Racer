@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main Menu.unity
     guid: fa98be754d0343547b0716b2f60c522f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Testing.unity
     guid: f89d386d9d7ef4a44844864f61034f56
+  - enabled: 1
+    path: Assets/Vehicle Selection.unity
+    guid: d8861a1810e7b294084de0f3f339971d
+  - enabled: 1
+    path: Assets/Testing Race course.unity
+    guid: 365e83da1d2de9041876bd8453d7d6c9
