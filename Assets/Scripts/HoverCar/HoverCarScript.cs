@@ -37,8 +37,13 @@ public class HoverCarScript : MonoBehaviour {
     public LayerMask layerMask;
     public GameObject[] hoverPoints;
 
+    [Header("Animator")]
+    public float animTurnSmooth;
+    Animator anim;
+    float turnAnimVel;
     
     void Start () {
+        anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         //layerMask = 1 << LayerMask.NameToLayer("Car");
         //layerMask = ~layerMask;
@@ -66,9 +71,16 @@ public class HoverCarScript : MonoBehaviour {
             //Turning
             currTurn = 0f;
             float turnAxis = ControllerMapping.instance.HorizontalMovement();
+
+            float animationTurn = anim.GetFloat("Turning");
+
+            animationTurn = Mathf.SmoothDamp(animationTurn, turnAxis, ref turnAnimVel, animTurnSmooth);
+
+            anim.SetFloat("Turning", animationTurn);
             if (Mathf.Abs(turnAxis) > deadZone)
             {
                 currTurn = turnAxis;
+                
             }
             currTurn = Mathf.Sign(currThrust) * currTurn;
         }

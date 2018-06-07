@@ -43,7 +43,6 @@ public class ControllerMapping : MonoBehaviour {
         }
     }
 
-
     public float TriggerAxis()
     {
         //Debug.Log("Checking");

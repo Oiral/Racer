@@ -6,9 +6,7 @@ using UnityEngine.Events;
 public class CamPosScript : MonoBehaviour {
 
     public UnityEvent OnSelection;
-
-	public void SelectPosition()
-    {
-        OnSelection.Invoke();
-    }
+    public UnityEvent OnHover;
+    public UnityEvent LeaveHover;
+    
 }
