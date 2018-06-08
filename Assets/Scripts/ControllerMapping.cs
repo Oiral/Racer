@@ -123,10 +123,10 @@ public class ControllerMapping : MonoBehaviour {
                 return Input.GetButtonDown("keyboard_Select");
 
             case Controllers.ps4_controller:
-                return Input.GetButtonDown("ps4_Select");
+                return Input.GetButtonDown("ps4_X");
 
             case Controllers.wireless_xbox_360_controller:
-                return Input.GetButtonDown("xbox_360_Wireless_Select");
+                return Input.GetButtonDown("xbox_360_Wireless_A");
             /*
         case Controllers.wired_xbox_360_controller:
             break;
@@ -146,10 +146,10 @@ public class ControllerMapping : MonoBehaviour {
                 return Input.GetButtonDown("keyboard_Back");
 
             case Controllers.ps4_controller:
-                return Input.GetButtonDown("ps4_Back");
+                return Input.GetButtonDown("ps4_Circle");
 
             case Controllers.wireless_xbox_360_controller:
-                return Input.GetButtonDown("xbox_360_Wireless_Back");
+                return Input.GetButtonDown("xbox_360_Wireless_B");
             /*
         case Controllers.wired_xbox_360_controller:
             break;

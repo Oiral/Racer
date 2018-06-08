@@ -37,6 +37,8 @@ public class MenuScript : MonoBehaviour
 
     public CameraTrackingScript camTracking;
 
+    public GameObject settingsUI; 
+
     public bool inSettings;
 
     public void SelectSettings()
@@ -45,6 +47,8 @@ public class MenuScript : MonoBehaviour
         settingsNodeParent.SetActive(true);
 
         inSettings = true;
+
+        settingsUI.SetActive(true);
 
         settingsNodeParent.GetComponent<MenuCamScript>().SetNode(0);
     }
@@ -55,6 +59,8 @@ public class MenuScript : MonoBehaviour
         settingsNodeParent.SetActive(false);
 
         inSettings = false;
+
+        settingsUI.SetActive(false);
 
         startNodeParent.GetComponent<MenuCamScript>().SetNode(0);
     }
