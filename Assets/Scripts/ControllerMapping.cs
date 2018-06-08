@@ -56,7 +56,6 @@ public class ControllerMapping : MonoBehaviour {
 
                 float leftTrigger = -Input.GetAxis("ps4_LeftTrigger");
                 return (rightTrigger + leftTrigger);
-                
             
             case Controllers.wireless_xbox_360_controller:
                 return (-Input.GetAxis("xbox_360_Wireless_Triggers"));
@@ -128,6 +127,29 @@ public class ControllerMapping : MonoBehaviour {
 
             case Controllers.wireless_xbox_360_controller:
                 return Input.GetButtonDown("xbox_360_Wireless_Select");
+            /*
+        case Controllers.wired_xbox_360_controller:
+            break;
+
+        case Controllers.xbox_one_controller:
+            break;*/
+            default:
+                return false;
+        }
+    }
+
+    public bool GetBackDown()
+    {
+        switch (currentController)
+        {
+            case Controllers.Keyboard:
+                return Input.GetButtonDown("keyboard_Back");
+
+            case Controllers.ps4_controller:
+                return Input.GetButtonDown("ps4_Back");
+
+            case Controllers.wireless_xbox_360_controller:
+                return Input.GetButtonDown("xbox_360_Wireless_Back");
             /*
         case Controllers.wired_xbox_360_controller:
             break;

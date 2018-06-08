@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuScript : MonoBehaviour{
+public class MenuScript : MonoBehaviour
+{
 
     public void LoadVechicleSelection()
     {
@@ -25,4 +26,40 @@ public class MenuScript : MonoBehaviour{
         Debug.Log("Quitting");
         Application.Quit();
     }
+
+
+
+
+    #region Only for Main Menu
+
+    public GameObject startNodeParent;
+    public GameObject settingsNodeParent;
+
+    public CameraTrackingScript camTracking;
+
+    public bool inSettings;
+
+    public void SelectSettings()
+    {
+        startNodeParent.SetActive(false);
+        settingsNodeParent.SetActive(true);
+
+        inSettings = true;
+
+        settingsNodeParent.GetComponent<MenuCamScript>().SetNode(0);
+    }
+
+    public void SelectTopMenu()
+    {
+        startNodeParent.SetActive(true);
+        settingsNodeParent.SetActive(false);
+
+        inSettings = false;
+
+        startNodeParent.GetComponent<MenuCamScript>().SetNode(0);
+    }
+
+
+
+    #endregion
 }

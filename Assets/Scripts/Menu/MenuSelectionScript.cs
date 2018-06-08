@@ -28,6 +28,8 @@ public class MenuSelectionScript : MonoBehaviour {
 
             Gizmos.color = lineColor;
             Gizmos.DrawLine(posNodes[i].position, posNodes[i].position + posNodes[i].forward * 2);
+
+            
         }
     }
 }

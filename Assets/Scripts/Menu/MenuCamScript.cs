@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuCamScript : MonoBehaviour {
 
@@ -12,6 +13,8 @@ public class MenuCamScript : MonoBehaviour {
 
     public float coolDownTime = 1f;
     public bool onCoolDown;
+
+    Coroutine coolDown;
 
     private void Start()
     {
@@ -25,15 +28,12 @@ public class MenuCamScript : MonoBehaviour {
                 camNodes.Add(camTransforms[i]);
             }
         }
-        //NextItem();
-        //Select();
         NextItem();
         
     }
 
     private void Update()
     {
-
         if (ControllerMapping.instance.HorizontalMovement() > 0.2f && onCoolDown == false)
         {
             NextItem();
@@ -50,11 +50,35 @@ public class MenuCamScript : MonoBehaviour {
                 camNodes[currentNode].GetComponent<CamPosScript>().OnSelection.Invoke();
             }
         }
+
+        if (ControllerMapping.instance.GetBackDown())
+        {
+            if (SceneManager.GetActiveScene().buildIndex > 0)
+            {
+                SceneManager.LoadScene(0);
+            }else if (GameObject.FindGameObjectWithTag("Menu Controller")!= null && GameObject.FindGameObjectWithTag("Menu Controller").GetComponent<MenuScript>().inSettings)
+            {
+                GameObject.FindGameObjectWithTag("Menu Controller").GetComponent<MenuScript>().SelectTopMenu();
+            }
+            //Go back in the menu!
+            //load scene 0
+            //if scene 0 dont load?
+            //if scene 0 and not on main track go back to main track!
+        }
+
+    }
+
+    public void SetNode(int nodeToSet)
+    {
+        Deselect();
+        currentNode = nodeToSet;
+        Select();
+        camTracking.Target = camNodes[currentNode].gameObject;
     }
 
     public void NextItem()
     {
-        StartCoroutine(StartCoolDown());
+        coolDown = StartCoroutine(StartCoolDown());
         Deselect();
         currentNode += 1;
         if (currentNode >= camNodes.Count)
@@ -67,7 +91,7 @@ public class MenuCamScript : MonoBehaviour {
 
     public void PrevItem()
     {
-        StartCoroutine(StartCoolDown());
+        coolDown = StartCoroutine(StartCoolDown());
         Deselect();
         currentNode -= 1;
         if (currentNode < 0)
@@ -82,6 +106,12 @@ public class MenuCamScript : MonoBehaviour {
     {
         onCoolDown = true;
         yield return new WaitForSeconds(coolDownTime);
+        onCoolDown = false;
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(coolDown);
         onCoolDown = false;
     }
 
