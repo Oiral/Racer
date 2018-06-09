@@ -14,6 +14,8 @@ public class MenuCamScript : MonoBehaviour {
     public float coolDownTime = 1f;
     public bool onCoolDown;
 
+    public bool menuActive;
+
     Coroutine coolDown;
 
     private void Start()
@@ -34,36 +36,41 @@ public class MenuCamScript : MonoBehaviour {
 
     private void Update()
     {
-        if (ControllerMapping.instance.HorizontalMovement() > 0.2f && onCoolDown == false)
+        if (menuActive)
         {
-            NextItem();
-        }
-        if (ControllerMapping.instance.HorizontalMovement() < -0.2f && onCoolDown == false)
-        {
-            PrevItem();
-        }
-        if (ControllerMapping.instance.GetSelectDown())
-        {
-            Debug.Log("Selecting Item!");
-            if (camNodes[currentNode].GetComponent<CamPosScript>() != null)
-            {
-                camNodes[currentNode].GetComponent<CamPosScript>().OnSelection.Invoke();
-            }
-        }
 
-        if (ControllerMapping.instance.GetBackDown())
-        {
-            if (SceneManager.GetActiveScene().buildIndex > 0)
+            if (ControllerMapping.instance.HorizontalMovement() > 0.2f && onCoolDown == false)
             {
-                SceneManager.LoadScene(0);
-            }else if (GameObject.FindGameObjectWithTag("Menu Controller")!= null && GameObject.FindGameObjectWithTag("Menu Controller").GetComponent<MenuScript>().inSettings)
-            {
-                GameObject.FindGameObjectWithTag("Menu Controller").GetComponent<MenuScript>().SelectTopMenu();
+                NextItem();
             }
-            //Go back in the menu!
-            //load scene 0
-            //if scene 0 dont load?
-            //if scene 0 and not on main track go back to main track!
+            if (ControllerMapping.instance.HorizontalMovement() < -0.2f && onCoolDown == false)
+            {
+                PrevItem();
+            }
+            if (ControllerMapping.instance.GetSelectDown())
+            {
+                Debug.Log("Selecting Item!");
+                if (camNodes[currentNode].GetComponent<CamPosScript>() != null)
+                {
+                    camNodes[currentNode].GetComponent<CamPosScript>().OnSelection.Invoke();
+                }
+            }
+
+            if (ControllerMapping.instance.GetBackDown())
+            {
+                if (SceneManager.GetActiveScene().buildIndex > 0)
+                {
+                    SceneManager.LoadScene(0);
+                }
+                else if (GameObject.FindGameObjectWithTag("Menu Controller") != null && GameObject.FindGameObjectWithTag("Menu Controller").GetComponent<MenuScript>().inSettings)
+                {
+                    GameObject.FindGameObjectWithTag("Menu Controller").GetComponent<MenuScript>().SelectTopMenu();
+                }
+                //Go back in the menu!
+                //load scene 0
+                //if scene 0 dont load?
+                //if scene 0 and not on main track go back to main track!
+            }
         }
 
     }

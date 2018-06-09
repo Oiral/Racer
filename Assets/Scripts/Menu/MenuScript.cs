@@ -48,6 +48,9 @@ public class MenuScript : MonoBehaviour
 
         inSettings = true;
 
+        settingsNodeParent.GetComponent<MenuCamScript>().menuActive = true;
+        startNodeParent.GetComponent<MenuCamScript>().menuActive = false;
+
         settingsUI.SetActive(true);
 
         settingsNodeParent.GetComponent<MenuCamScript>().SetNode(0);
@@ -60,12 +63,13 @@ public class MenuScript : MonoBehaviour
 
         inSettings = false;
 
+        settingsNodeParent.GetComponent<MenuCamScript>().menuActive = false;
+        startNodeParent.GetComponent<MenuCamScript>().menuActive = true;
+
         settingsUI.SetActive(false);
 
         startNodeParent.GetComponent<MenuCamScript>().SetNode(0);
     }
-
-
 
     #endregion
 }

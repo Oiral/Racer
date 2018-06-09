@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 292067751}
   - component: {fileID: 292067750}
   m_Layer: 5
-  m_Name: Canvas (3)
+  m_Name: Main Volume Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -909,6 +909,7 @@ MonoBehaviour:
   camTracking: {fileID: 125334099}
   coolDownTime: 0.5
   onCoolDown: 0
+  menuActive: 0
 --- !u!114 &439463918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1728,7 +1729,7 @@ GameObject:
   - component: {fileID: 741067287}
   - component: {fileID: 741067286}
   m_Layer: 5
-  m_Name: Canvas (5)
+  m_Name: Music Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2873,6 +2874,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &1199999213
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4939467033035212, guid: 8415adc9540ad6c44b232d12b7969dd3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939467033035212, guid: 8415adc9540ad6c44b232d12b7969dd3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939467033035212, guid: 8415adc9540ad6c44b232d12b7969dd3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939467033035212, guid: 8415adc9540ad6c44b232d12b7969dd3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939467033035212, guid: 8415adc9540ad6c44b232d12b7969dd3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939467033035212, guid: 8415adc9540ad6c44b232d12b7969dd3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939467033035212, guid: 8415adc9540ad6c44b232d12b7969dd3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939467033035212, guid: 8415adc9540ad6c44b232d12b7969dd3, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8415adc9540ad6c44b232d12b7969dd3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1209169336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,9 +2973,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d86b33a08a0473429907a3959dfc06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MasterVolume: 0
-  EffectsVolume: 0
-  MusicVolume: 0
+  volumeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: -80
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 8
+      value: 0
+      inSlope: 3.7500052
+      outSlope: 3.7500052
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 10
+      value: 20
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
   audioMixer: {fileID: 24100000, guid: 6f4043ae6ac46f14cb490382e27c95fa, type: 2}
 --- !u!1 &1262862163
 GameObject:
@@ -2944,7 +3008,7 @@ GameObject:
   - component: {fileID: 1262862164}
   - component: {fileID: 1262862165}
   m_Layer: 0
-  m_Name: Quit Node
+  m_Name: Music Volume Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2976,7 +3040,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelection:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1209169339}
+        m_MethodName: UpdateMusicVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnHover:
@@ -3225,7 +3300,7 @@ GameObject:
   - component: {fileID: 1503130760}
   - component: {fileID: 1503130759}
   m_Layer: 5
-  m_Name: Canvas (4)
+  m_Name: Sound Effect Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3318,7 +3393,7 @@ GameObject:
   - component: {fileID: 1607204707}
   - component: {fileID: 1607204708}
   m_Layer: 0
-  m_Name: Start Node
+  m_Name: Back Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3350,7 +3425,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelection:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1209169337}
+        m_MethodName: SelectTopMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnHover:
@@ -3377,7 +3463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1717178469
 Transform:
   m_ObjectHideFlags: 0
@@ -3590,6 +3676,7 @@ MonoBehaviour:
   camTracking: {fileID: 125334099}
   coolDownTime: 0.5
   onCoolDown: 0
+  menuActive: 1
 --- !u!4 &1853605918
 Transform:
   m_ObjectHideFlags: 0
@@ -3703,7 +3790,7 @@ GameObject:
   - component: {fileID: 1928060636}
   - component: {fileID: 1928060637}
   m_Layer: 0
-  m_Name: Quit Node (1)
+  m_Name: Effects Volume Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3735,7 +3822,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelection:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1209169339}
+        m_MethodName: UpdateEffectsVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnHover:
@@ -3760,7 +3858,7 @@ GameObject:
   - component: {fileID: 1939446187}
   - component: {fileID: 1939446186}
   m_Layer: 5
-  m_Name: Canvas (6)
+  m_Name: Back Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3853,7 +3951,7 @@ GameObject:
   - component: {fileID: 1940504284}
   - component: {fileID: 1940504285}
   m_Layer: 0
-  m_Name: Settings Node
+  m_Name: Main Volume Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3885,7 +3983,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelection:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1209169339}
+        m_MethodName: UpdateMasterVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnHover:
