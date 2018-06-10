@@ -9,14 +9,11 @@ public class HoversAudioScript : MonoBehaviour {
     public AudioSource hoverAudio;
 
     HoverCarScript hoverScript;
-    GameObject audioMan;
 
     private void Start()
     {
         hoverScript = GetComponentInParent<HoverCarScript>();
         //hoverAudio = GetComponent<AudioSource>();
-
-        audioMan = GameObject.FindGameObjectWithTag("AudioManager");
 
     }
 

@@ -11,7 +11,7 @@ public class HoverCarScript : MonoBehaviour {
     public float deadZone = 0.1f;
     public float speed;
     public Text speedoText;
-    public bool isPlayer = true;
+    public bool playerControled = true;
 
     [Header("Brake and Acceleration")]
     public float forwardAcl = 100f;
@@ -51,7 +51,7 @@ public class HoverCarScript : MonoBehaviour {
 	
 	void Update() {
 
-        if (isPlayer)
+        if (playerControled)
         {
             rb.drag = dragForceDead;
             //Main Thrust

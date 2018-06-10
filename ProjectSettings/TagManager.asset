@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Menu Controller
+  - AI
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

@@ -51,7 +51,7 @@ public class RacingAI : MonoBehaviour {
         if (hoverScript.currThrust < 100)
         {
             rb.drag = hoverScript.dragForceDead;
-            Debug.Log("Less drag force");
+            //Debug.Log("Less drag force");
         }
         else
         {
