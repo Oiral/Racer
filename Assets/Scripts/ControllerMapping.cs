@@ -160,4 +160,27 @@ public class ControllerMapping : MonoBehaviour {
                 return false;
         }
     }
+
+    public bool GetStartDown()
+    {
+        switch (currentController)
+        {
+            case Controllers.Keyboard:
+                return Input.GetButtonDown("keyboard_Escape");
+
+            case Controllers.ps4_controller:
+                return Input.GetButtonDown("ps4_Options");
+
+            case Controllers.wireless_xbox_360_controller:
+                return Input.GetButtonDown("xbox_360_Wireless_Start");
+            /*
+        case Controllers.wired_xbox_360_controller:
+            break;
+
+        case Controllers.xbox_one_controller:
+            break;*/
+            default:
+                return false;
+        }
+    }
 }

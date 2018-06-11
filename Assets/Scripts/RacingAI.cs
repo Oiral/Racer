@@ -14,6 +14,11 @@ public class RacingAI : MonoBehaviour {
 
     int currentNode = 0;
 
+    [Header ("Pause Stuff")]
+    public bool paused;
+    Vector3 savedVelocity;
+    Vector3 savedAngularVelocity;
+
     private void Start()
     {
         hoverScript = GetComponent<HoverCarScript>();
@@ -27,13 +32,17 @@ public class RacingAI : MonoBehaviour {
                 nodes.Add(pathTransfrom[i]);
             }
         }
+        PlayerPauseScript.pauseEvent.AddListener(ToggleAIPause);
     }
 
     private void FixedUpdate()
     {
-        ApplySteering();
-        Drive();
-        CheckWaypoint();
+        if (!paused)
+        {
+            ApplySteering();
+            Drive();
+            CheckWaypoint();
+        }
     }
 
     void ApplySteering()
@@ -67,7 +76,12 @@ public class RacingAI : MonoBehaviour {
 
     void CheckWaypoint()
     {
-        if (Vector3.Distance(transform.position, nodes[currentNode].position) < 15f)
+        Vector3 zeroPos = transform.position;
+        Vector3 zeroNodePos = nodes[currentNode].position;
+
+        zeroPos.y = zeroNodePos.y = 0;
+
+        if (Vector3.Distance(zeroPos, zeroNodePos) < 15f)
         {
             if (currentNode == nodes.Count - 1)
             {
@@ -78,5 +92,28 @@ public class RacingAI : MonoBehaviour {
                 currentNode++;
             }
         }
+    }
+
+    void ToggleAIPause()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+
+        paused = !paused;
+
+        if (paused) //If the game has just gotten pause
+        {
+            savedVelocity = rb.velocity;
+            rb.velocity = Vector3.zero;
+
+            savedAngularVelocity = rb.angularVelocity;
+            rb.angularVelocity = Vector3.zero;
+        }
+        else
+        {
+            rb.velocity = savedVelocity;
+            rb.angularVelocity = savedAngularVelocity;
+        }
+
+        rb.isKinematic = paused;
     }
 }

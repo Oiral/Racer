@@ -81,7 +81,7 @@ public class DistanceTrackerScript : MonoBehaviour {
     void NextLap()
     {
         checkingForPoints = true;
-        Debug.Log("Lap!");
+        //Debug.Log("Lap!");
         currentCheckPoint = 0;
         targetCheck = checkPoints[currentCheckPoint].gameObject;
     }
@@ -89,7 +89,7 @@ public class DistanceTrackerScript : MonoBehaviour {
     //Current Lap Distance = distance to next marker + all passed markers distance from start
     void CalculateDistanceAroundTrack()
     {
-        Debug.Log("Running?");
+        //Debug.Log("Running?");
         float distanceFromCheckpoint = 0;
         if (currentCheckPoint == 0 && targetCheck != startLine)
         {

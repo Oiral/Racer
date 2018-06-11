@@ -93,6 +93,13 @@ public class LapScript : MonoBehaviour {
 
     private void NextLap()
     {
+        //Check if the lap is the last lap
+        if (lapCount >= maxlaps)
+        {
+            //Finish the race
+            FinishLap();
+        }
+
         Debug.Log("Lap number: " + lapCount + " | Lap Time: " + lapTimer);
 
         //Add one to the lap counter
@@ -114,12 +121,3 @@ public class LapScript : MonoBehaviour {
     }
 
 }
-
-        //Check if the lap is the last lap
-
-        if (lapCount >= maxlaps)
-        {
-            //Finish the race
-            FinishLap();
-        }
-

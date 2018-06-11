@@ -42,7 +42,7 @@ public class RaceStartScript : MonoBehaviour {
         camTracking.moveStiffness = .5f;
         camTracking.rotationStiffness = 1f;
 
-        float secondLength = 1.5f;
+        float secondLength = 2f;
 
         yield return new WaitForSeconds(secondLength);
         countDownText.text = "3";

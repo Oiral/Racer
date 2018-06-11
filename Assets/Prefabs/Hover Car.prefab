@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 136146974253594256}
   - component: {fileID: 136810121256848996}
   - component: {fileID: 114598446808540030}
+  - component: {fileID: 114081270726332242}
   m_Layer: 8
   m_Name: Hover Car
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -364,7 +365,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1049612252296170}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0, y: 6.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4095929561728780}
@@ -472,7 +473,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ea5a9cbc13ed78c4bb8effc6b635652c, type: 2}
+  - {fileID: 2100000, guid: 6f08e7ed21b994c4a973aed1a3d7ea24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -690,6 +691,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverForce: 2000
+--- !u!114 &114081270726332242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1049612252296170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7baa5089357a7a439d53018cad61e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceAroundTrack: 0
+  distanceText: {fileID: 0}
+  lapLength: 0
 --- !u!114 &114090146137557304
 MonoBehaviour:
   m_ObjectHideFlags: 1
