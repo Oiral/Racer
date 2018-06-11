@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: 3967475922c45b34c915d958a6d4dc4d
+timeCreated: 1528665580
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Section7_SectionF_SectionF_polySurface1_polySurface1
+    100002: //RootNode
+    100004: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface32_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    100006: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    100008: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    100010: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    100012: SectionF_SectionF_polySurface1_polySurface1
+    100014: SectionF_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    400000: Section7_SectionF_SectionF_polySurface1_polySurface1
+    400002: //RootNode
+    400004: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface32_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    400006: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    400008: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    400010: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    400012: SectionF_SectionF_polySurface1_polySurface1
+    400014: SectionF_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    2300000: Section7_SectionF_SectionF_polySurface1_polySurface1
+    2300002: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface32_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    2300004: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    2300006: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    2300008: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    2300010: SectionF_SectionF_polySurface1_polySurface1
+    2300012: SectionF_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    3300000: Section7_SectionF_SectionF_polySurface1_polySurface1
+    3300002: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface32_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    3300004: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    3300006: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    3300008: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    3300010: SectionF_SectionF_polySurface1_polySurface1
+    3300012: SectionF_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    4300000: Section7_SectionF_SectionF_polySurface1_polySurface1
+    4300002: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface32_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    4300004: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    4300006: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    4300008: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    4300010: SectionF_SectionF_polySurface1_polySurface1
+    4300012: SectionF_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    6400000: Section7_SectionF_SectionF_polySurface1_polySurface1
+    6400002: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface32_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    6400004: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+    6400006: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    6400008: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1
+    6400010: SectionF_SectionF_polySurface1_polySurface1
+    6400012: SectionF_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock3_initialShadingGroup12
+    second: {fileID: 2100000, guid: b1596c68ad6f202418f60abebe5446f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock3_initialShadingGroup16
+    second: {fileID: 2100000, guid: 8406460bff4746147b32c51122680f17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock4_initialShadingGroup12
+    second: {fileID: 2100000, guid: 50effa4e708689546be94a625cc92a26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Section7_SectionF_SectionF_polySurface1_polySurface1Mat
+    second: {fileID: 2100000, guid: 9c10944d9606ce84bb3e2d2dbc12142b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface32_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1Mat
+    second: {fileID: 2100000, guid: 45cdbeff82b542d4b9fbb725255cc946, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1Mat
+    second: {fileID: 2100000, guid: 2311cd870ab387346bcdc9ac3f2f3b6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface16_SectionF_polySurface50_SectionF_polySurface51_polySurface1Mat
+    second: {fileID: 2100000, guid: 6827a14bf84d22143ab0fd2ab7d96ca4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionF_SectionF_pCylinder1_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface17_polySurface1Mat
+    second: {fileID: 2100000, guid: 89bfdd7435fc36a46a7de7fbd2250072, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionF_SectionF_polySurface1_SectionF_polySurface50_SectionF_polySurface51_polySurface1Mat
+    second: {fileID: 2100000, guid: 226c0d05db7f167429d8922e2d8ce129, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionF_SectionF_polySurface1_polySurface1Mat
+    second: {fileID: 2100000, guid: 426c5bc2d29b37f4abd874224e9c3dda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionF_initialShadingGroup
+    second: {fileID: 2100000, guid: 9b3ea7352f0c0ef408960485c736bbc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SingleCactusUV_initialShadingGroup
+    second: {fileID: 2100000, guid: b26e2a13d977bdb469a9034f36604466, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oceanShader7SG
+    second: {fileID: 2100000, guid: d75f477d52c656b488d90e48db9c0d3c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

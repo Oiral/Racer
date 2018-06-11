@@ -5,8 +5,10 @@ using UnityEngine;
 public class LapScript : MonoBehaviour {
 
     public float lapTimer = 0f;
-    public int lapCount = 0;
+    public int lapCount = 1;
     public bool raceGoing = false;
+
+    public int maxlaps;
 
     public Dictionary<int, float> lapTimes = new Dictionary<int, float>();
 
@@ -69,8 +71,17 @@ public class LapScript : MonoBehaviour {
 
     private void NextLap()
     {
+        //Check if the lap is the last lap
+
+        if (lapCount >= maxlaps)
+        {
+            //Finish the race
+            FinishLap();
+        }
+
         Debug.Log("Lap number: " + lapCount + " | Lap Time: " + lapTimer);
 
+        //Add one to the lap counter
         lapTimes.Add(lapCount, lapTimer);
         lapTimer = 0;
         lapCount += 1;
@@ -82,5 +93,10 @@ public class LapScript : MonoBehaviour {
         }
     }
 
+    private void FinishLap()
+    {
+        Debug.Log("You finished!");
+        Debug.Break();
+    }
 
 }

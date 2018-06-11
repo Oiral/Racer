@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 7d73534bcabbaf04091f986e66223ff8
+timeCreated: 1528665616
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Rock45_SectionE_bottom2_SectionE1
+    100002: Rock45_SectionE_SectionE1
+    100004: Section6_SectionE_SectionE1
+    100006: //RootNode
+    100008: SectionE1
+    100010: SectionE_SectionE1
+    100012: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    100014: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_SectionE1
+    100016: SectionE_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    400000: Rock45_SectionE_bottom2_SectionE1
+    400002: Rock45_SectionE_SectionE1
+    400004: Section6_SectionE_SectionE1
+    400006: //RootNode
+    400008: SectionE1
+    400010: SectionE_SectionE1
+    400012: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    400014: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_SectionE1
+    400016: SectionE_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    2300000: Rock45_SectionE_bottom2_SectionE1
+    2300002: Rock45_SectionE_SectionE1
+    2300004: Section6_SectionE_SectionE1
+    2300006: SectionE1
+    2300008: SectionE_SectionE1
+    2300010: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    2300012: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_SectionE1
+    2300014: SectionE_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    3300000: Rock45_SectionE_bottom2_SectionE1
+    3300002: Rock45_SectionE_SectionE1
+    3300004: Section6_SectionE_SectionE1
+    3300006: SectionE1
+    3300008: SectionE_SectionE1
+    3300010: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    3300012: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_SectionE1
+    3300014: SectionE_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    4300000: Rock45_SectionE_bottom2_SectionE1
+    4300002: Rock45_SectionE_SectionE1
+    4300004: Section6_SectionE_SectionE1
+    4300006: SectionE1
+    4300008: SectionE_SectionE1
+    4300010: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    4300012: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_SectionE1
+    4300014: SectionE_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    6400000: Rock45_SectionE_bottom2_SectionE1
+    6400002: Rock45_SectionE_SectionE1
+    6400004: Section6_SectionE_SectionE1
+    6400006: SectionE1
+    6400008: SectionE_SectionE1
+    6400010: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+    6400012: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_SectionE1
+    6400014: SectionE_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock45_SectionE_SectionE1Mat
+    second: {fileID: 2100000, guid: fe2c858c5a5441f45b727317899f2dd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock45_SectionE_bottom2_SectionE1Mat
+    second: {fileID: 2100000, guid: 4cc6d82ddef6d08479fb9150f83cb279, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Section6_SectionE_SectionE1Mat
+    second: {fileID: 2100000, guid: aecd45ddcf3677b46b529121aa495bd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionE1Mat
+    second: {fileID: 2100000, guid: 7a9f9177740a10e46a49f87b86e529ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionE_SectionE1Mat
+    second: {fileID: 2100000, guid: fa38645527d0f0440a1e91ed3a9a2beb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_SectionE1Mat
+    second: {fileID: 2100000, guid: c5c93bdd04bd3ff41a33ccc6432341c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionE_SectionE_polySurface32_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1Mat
+    second: {fileID: 2100000, guid: cd4a6bca893ae5c4d86b71d13c55776e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionE_SectionE_polySurface50_SectionE_polySurface51_pCylinder1_polySurface16_SectionE1Mat
+    second: {fileID: 2100000, guid: e492088bf175b3c408b2dd28c0460433, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

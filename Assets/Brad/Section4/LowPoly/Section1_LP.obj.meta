@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 486366332ed4f2149a9c4d48b739ad31
+timeCreated: 1528665610
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BrokenCar1_Section3_SectionA_SectionA1_polySurface1
+    100002: BrokenCar2_Section3_SectionA_SectionA1_polySurface1
+    100004: BrokenCar3_Section3_SectionA_SectionA1_polySurface1
+    100006: BrokenCar4_Section3_SectionA_SectionA1_polySurface1
+    100008: Bus_Section3_SectionA_SectionA1_polySurface1
+    100010: Powerpole1_Section3_SectionA_SectionA1_polySurface1
+    100012: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    100014: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    100016: Powerpole2_Section3_SectionA_SectionA1_polySurface1
+    100018: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    100020: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    100022: Powerpole3_Section3_SectionA_SectionA1_polySurface1
+    100024: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    100026: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    100028: Powerpole_Section3_SectionA_SectionA1_polySurface1
+    100030: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    100032: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    100034: //RootNode
+    100036: Section3_SectionA_SectionA1_polySurface1
+    100038: Section3_SectionA_SectionA1_pPlane1_polySurface1
+    100040: Section3_SectionA_SectionA1_pPlane2_polySurface1
+    100042: Section3_SectionA_SectionA1_Sign_polySurface1
+    100044: Section3_SectionA_SectionA1_TireBunch_polySurface1
+    100046: SectionA_SectionA1_polySurface32_polySurface50_polySurface51_polySurface1
+    400000: BrokenCar1_Section3_SectionA_SectionA1_polySurface1
+    400002: BrokenCar2_Section3_SectionA_SectionA1_polySurface1
+    400004: BrokenCar3_Section3_SectionA_SectionA1_polySurface1
+    400006: BrokenCar4_Section3_SectionA_SectionA1_polySurface1
+    400008: Bus_Section3_SectionA_SectionA1_polySurface1
+    400010: Powerpole1_Section3_SectionA_SectionA1_polySurface1
+    400012: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    400014: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    400016: Powerpole2_Section3_SectionA_SectionA1_polySurface1
+    400018: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    400020: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    400022: Powerpole3_Section3_SectionA_SectionA1_polySurface1
+    400024: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    400026: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    400028: Powerpole_Section3_SectionA_SectionA1_polySurface1
+    400030: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    400032: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    400034: //RootNode
+    400036: Section3_SectionA_SectionA1_polySurface1
+    400038: Section3_SectionA_SectionA1_pPlane1_polySurface1
+    400040: Section3_SectionA_SectionA1_pPlane2_polySurface1
+    400042: Section3_SectionA_SectionA1_Sign_polySurface1
+    400044: Section3_SectionA_SectionA1_TireBunch_polySurface1
+    400046: SectionA_SectionA1_polySurface32_polySurface50_polySurface51_polySurface1
+    2300000: BrokenCar1_Section3_SectionA_SectionA1_polySurface1
+    2300002: BrokenCar2_Section3_SectionA_SectionA1_polySurface1
+    2300004: BrokenCar3_Section3_SectionA_SectionA1_polySurface1
+    2300006: BrokenCar4_Section3_SectionA_SectionA1_polySurface1
+    2300008: Bus_Section3_SectionA_SectionA1_polySurface1
+    2300010: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    2300012: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    2300014: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    2300016: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    2300018: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    2300020: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    2300022: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    2300024: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    2300026: Section3_SectionA_SectionA1_polySurface1
+    2300028: Section3_SectionA_SectionA1_pPlane1_polySurface1
+    2300030: Section3_SectionA_SectionA1_pPlane2_polySurface1
+    2300032: Section3_SectionA_SectionA1_Sign_polySurface1
+    2300034: Section3_SectionA_SectionA1_TireBunch_polySurface1
+    2300036: SectionA_SectionA1_polySurface32_polySurface50_polySurface51_polySurface1
+    3300000: BrokenCar1_Section3_SectionA_SectionA1_polySurface1
+    3300002: BrokenCar2_Section3_SectionA_SectionA1_polySurface1
+    3300004: BrokenCar3_Section3_SectionA_SectionA1_polySurface1
+    3300006: BrokenCar4_Section3_SectionA_SectionA1_polySurface1
+    3300008: Bus_Section3_SectionA_SectionA1_polySurface1
+    3300010: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    3300012: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    3300014: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    3300016: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    3300018: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    3300020: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    3300022: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    3300024: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    3300026: Section3_SectionA_SectionA1_polySurface1
+    3300028: Section3_SectionA_SectionA1_pPlane1_polySurface1
+    3300030: Section3_SectionA_SectionA1_pPlane2_polySurface1
+    3300032: Section3_SectionA_SectionA1_Sign_polySurface1
+    3300034: Section3_SectionA_SectionA1_TireBunch_polySurface1
+    3300036: SectionA_SectionA1_polySurface32_polySurface50_polySurface51_polySurface1
+    4300000: BrokenCar1_Section3_SectionA_SectionA1_polySurface1
+    4300002: BrokenCar2_Section3_SectionA_SectionA1_polySurface1
+    4300004: BrokenCar3_Section3_SectionA_SectionA1_polySurface1
+    4300006: BrokenCar4_Section3_SectionA_SectionA1_polySurface1
+    4300008: Bus_Section3_SectionA_SectionA1_polySurface1
+    4300010: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    4300012: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    4300014: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    4300016: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    4300018: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    4300020: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    4300022: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    4300024: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    4300026: Section3_SectionA_SectionA1_polySurface1
+    4300028: Section3_SectionA_SectionA1_pPlane1_polySurface1
+    4300030: Section3_SectionA_SectionA1_pPlane2_polySurface1
+    4300032: Section3_SectionA_SectionA1_Sign_polySurface1
+    4300034: Section3_SectionA_SectionA1_TireBunch_polySurface1
+    4300036: SectionA_SectionA1_polySurface32_polySurface50_polySurface51_polySurface1
+    6400000: BrokenCar1_Section3_SectionA_SectionA1_polySurface1
+    6400002: BrokenCar2_Section3_SectionA_SectionA1_polySurface1
+    6400004: BrokenCar3_Section3_SectionA_SectionA1_polySurface1
+    6400006: BrokenCar4_Section3_SectionA_SectionA1_polySurface1
+    6400008: Bus_Section3_SectionA_SectionA1_polySurface1
+    6400010: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    6400012: Powerpole1_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    6400014: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    6400016: Powerpole2_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    6400018: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    6400020: Powerpole3_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    6400022: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart0
+    6400024: Powerpole_Section3_SectionA_SectionA1_polySurface1_MeshPart1
+    6400026: Section3_SectionA_SectionA1_polySurface1
+    6400028: Section3_SectionA_SectionA1_pPlane1_polySurface1
+    6400030: Section3_SectionA_SectionA1_pPlane2_polySurface1
+    6400032: Section3_SectionA_SectionA1_Sign_polySurface1
+    6400034: Section3_SectionA_SectionA1_TireBunch_polySurface1
+    6400036: SectionA_SectionA1_polySurface32_polySurface50_polySurface51_polySurface1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrokenCar1_Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: 3f0c6d9f6acc82b49a88ea7ca57f2d80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrokenCar2_Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: 50b2882e041dad244a2b79b28e129c01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrokenCar3_Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: facefd38a288db74b9289505b9d7d5a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrokenCar4_Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: c9c0b0d996baba04d828f1967b856a9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bus_Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: b64433ebab852de44bc219a6eabba7ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MultiTyre_initialShadingGroup
+    second: {fileID: 2100000, guid: 2e2cddde9f5fe684b9bf182276d2a686, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Powerpole1_Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: a4fcdcc17b7d1a543add985b4c10a5d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Powerpole2_Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: 148e0fec9abe86344a5ccd546265d6a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Powerpole3_Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: 0c624dcc6162cdf42b281c170b85cf38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PowerpoleAtlas_PP2_Powerpole_initialShadingGroup
+    second: {fileID: 2100000, guid: 7097ddfc307be4448aa6a7426d5f7d23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Powerpole_Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: 69af97c240ea56c4da0332f059e79f2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock2_initialShadingGroup2
+    second: {fileID: 2100000, guid: 6c50e4dc88b310e4ea110f9c4d4991e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock3_initialShadingGroup
+    second: {fileID: 2100000, guid: 092d9c19be5e53348a6eaa4da645ddf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock3_initialShadingGroup2
+    second: {fileID: 2100000, guid: ea9575c1651825c47a98cf41c26f956e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock4_initialShadingGroup
+    second: {fileID: 2100000, guid: 908ea50dd1336a54aa7569ab76979e96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock5_initialShadingGroup
+    second: {fileID: 2100000, guid: bc5de324a0728b74e8016e2af376f919, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SceneSec7_initialShadingGroup
+    second: {fileID: 2100000, guid: 40d8cf4548cc5994eb5fd19705eba3f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Section3_SectionA_SectionA1_Sign_polySurface1Mat
+    second: {fileID: 2100000, guid: 3365c019c08b5dd4c9b196f0100bdfbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Section3_SectionA_SectionA1_TireBunch_polySurface1Mat
+    second: {fileID: 2100000, guid: e6e0085bb00385c4bbac8139111af8ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Section3_SectionA_SectionA1_pPlane1_polySurface1Mat
+    second: {fileID: 2100000, guid: 5fcc81514aefcff42af734dfc2c719fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Section3_SectionA_SectionA1_pPlane2_polySurface1Mat
+    second: {fileID: 2100000, guid: 524aae8eac1913145a434776013b1742, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Section3_SectionA_SectionA1_polySurface1Mat
+    second: {fileID: 2100000, guid: 3bcd737b6c52672409bff1141300da26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionA_SectionA1_polySurface32_polySurface50_polySurface51_polySurface1Mat
+    second: {fileID: 2100000, guid: a959497e93970a545bee136b8cd191e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SectionA_initialShadingGroup
+    second: {fileID: 2100000, guid: 5576ed431bc524e47b2409887b2ef026, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sign_initialShadingGroup
+    second: {fileID: 2100000, guid: 174dddf7c4052af4da54c1eae1772dfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bUSuv_initialShadingGroup
+    second: {fileID: 2100000, guid: 904fc6e2b6902354981e16bffc004994, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cARWRECKuV_initialShadingGroup
+    second: {fileID: 2100000, guid: 4f300452891c88541a216957f604c4d4, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
