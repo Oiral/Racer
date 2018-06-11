@@ -46,7 +46,13 @@ public class RacingAI : MonoBehaviour {
 
     void Drive()
     {
-        hoverScript.currThrust = Mathf.Lerp(hoverScript.currThrust, (((1 - (Mathf.Sign(steering) * steering)) + (Mathf.Sign(steering) * steering)/4) * hoverScript.forwardAcl), 0.05f);
+        float absSteering = Mathf.Abs(steering);
+
+        float inverseSteering = (1 - absSteering);
+
+        hoverScript.currThrust = Mathf.Lerp(hoverScript.currThrust, ((inverseSteering + (absSteering / 2)) * hoverScript.forwardAcl * 1.15f), 0.05f);
+        //hoverScript.currThrust = Mathf.Lerp(hoverScript.currThrust, (((1 - (Mathf.Sign(steering) * steering)) + (Mathf.Sign(steering) * steering)/4) * hoverScript.forwardAcl * 1.01f), 0.05f);
+
         Rigidbody rb = GetComponent<Rigidbody>();
         if (hoverScript.currThrust < 100)
         {

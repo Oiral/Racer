@@ -41,9 +41,10 @@ GameObject:
   - component: {fileID: 136458085947739856}
   - component: {fileID: 114671785254485244}
   - component: {fileID: 114430783312354214}
+  - component: {fileID: 114037824627085354}
   m_Layer: 9
   m_Name: AI
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +163,7 @@ Transform:
   - {fileID: 4673039666868046}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -96.11101, z: 0}
 --- !u!4 &4673039666868046
 Transform:
   m_ObjectHideFlags: 1
@@ -350,6 +351,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114037824627085354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244889680683778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7baa5089357a7a439d53018cad61e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceAroundTrack: 0
+  distanceText: {fileID: 0}
+  lapLength: 0
 --- !u!114 &114080311333767546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,13 +403,13 @@ MonoBehaviour:
   deadZone: 0.2
   speed: 0
   speedoText: {fileID: 0}
-  isPlayer: 0
+  playerControled: 0
   forwardAcl: 250
   backwardAcl: 150
   currThrust: 0
-  dragForceDead: 0.8
+  dragForceDead: 2
   dragForceActive: 2
-  turnStrength: 1500
+  turnStrength: 2500
   turnWeaveStrength: 200
   currTurn: 0
   hoverHeight: 1.5
@@ -406,6 +421,7 @@ MonoBehaviour:
   - {fileID: 1867842837931532}
   - {fileID: 1953926179559530}
   - {fileID: 1289793536002804}
+  animTurnSmooth: 0
 --- !u!114 &114529226197783544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -465,7 +481,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1244889680683778}
   m_Material: {fileID: 13400000, guid: a2b04a075cfa7e5429d698f6aa98083b, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1

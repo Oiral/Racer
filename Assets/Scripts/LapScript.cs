@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+[RequireComponent(typeof(BoxCollider))]
 public class LapScript : MonoBehaviour {
 
     public float lapTimer = 0f;
@@ -12,14 +14,34 @@ public class LapScript : MonoBehaviour {
 
     public List<CheckPointScript> checkPoints;
 
-    private void Start()
+    public static UnityEvent playerNextLap = new UnityEvent();
+
+
+    private void OnDrawGizmosSelected()
     {
-        foreach (GameObject checkPoint in GameObject.FindGameObjectsWithTag("CheckPoint"))
-        {
-            checkPoints.Add(checkPoint.GetComponent<CheckPointScript>());
-        }
+        BoxCollider col = GetComponent<BoxCollider>();
+        Gizmos.matrix = transform.localToWorldMatrix;
+        Color colorToDraw = Color.white;
+        colorToDraw.a = .5f;
+
+        Gizmos.color = colorToDraw;
+        Gizmos.DrawCube(Vector3.zero, col.size);
     }
 
+    private void Start()
+    {
+        
+        if (checkPoints.Count <= 0)
+        {
+            foreach (GameObject checkPoint in GameObject.FindGameObjectsWithTag("CheckPoint"))
+            {
+                checkPoints.Add(checkPoint.GetComponent<CheckPointScript>());
+            }
+        }
+
+        playerNextLap.AddListener(NextLap);
+
+    }
 
     // Update is called once per frame
     void Update () {
@@ -53,7 +75,7 @@ public class LapScript : MonoBehaviour {
             {
                 if (missedCheckPoint == false)
                 {
-                    NextLap();
+                    playerNextLap.Invoke();
                 }
             }
             else
@@ -69,6 +91,7 @@ public class LapScript : MonoBehaviour {
 
     private void NextLap()
     {
+        
         Debug.Log("Lap number: " + lapCount + " | Lap Time: " + lapTimer);
 
         lapTimes.Add(lapCount, lapTimer);
