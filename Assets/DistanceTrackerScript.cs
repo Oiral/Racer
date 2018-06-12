@@ -22,7 +22,13 @@ public class DistanceTrackerScript : MonoBehaviour {
 
     public float lapLength;
 
+    public int laps = 0;
+    public float totalDistance;
+
+    public GameObject player;
+
     void Start () {
+        player = GameObject.FindGameObjectWithTag("Player");
         startLine = GameObject.FindGameObjectWithTag("Start Line");
         checkPoints = startLine.GetComponent<LapScript>().checkPoints;
         CalculateLapLength();
@@ -55,11 +61,18 @@ public class DistanceTrackerScript : MonoBehaviour {
         distanceToCheckpoint = DistanceBetweenCheckpoints(currentCheckPoint,gameObject);
         CalculateDistanceAroundTrack();
 
+        totalDistance = distanceAroundTrack + ((laps + 1) * lapLength);
+
         if (distanceText != null)
         {
             distanceText.text = distanceAroundTrack.ToString() + "m";
         }
-        
+
+        if (player != gameObject)
+        {
+            FindDistanceToPlayer();
+        }
+
     }
 
     private void NextCheckPoint()
@@ -80,6 +93,7 @@ public class DistanceTrackerScript : MonoBehaviour {
 
     void NextLap()
     {
+        laps += 1;
         checkingForPoints = true;
         //Debug.Log("Lap!");
         currentCheckPoint = 0;
@@ -116,11 +130,11 @@ public class DistanceTrackerScript : MonoBehaviour {
             }
         } else if (targetCheck == startLine)
         {
-            Debug.Log("Check Done");
+            //Debug.Log("Check Done");
             //loop through all the checkpoints before the current one
             for (int i = 1; i < checkPoints.Count; i++)
             {
-                Debug.Log("Final checking");
+                //Debug.Log("Final checking");
                 distanceAroundTrack += DistanceBetweenCheckpoints(i, i - 1);
             }
         }
@@ -150,5 +164,12 @@ public class DistanceTrackerScript : MonoBehaviour {
     //Find Distance Between two players
     //If my current lap != your current lap (more math stuff)
 
+    void FindDistanceToPlayer()
+    {
+        float playerDistance = player.GetComponent<DistanceTrackerScript>().totalDistance;
 
+        float distancediff = playerDistance - totalDistance;
+        Debug.Log(distancediff);
+
+    }
 }

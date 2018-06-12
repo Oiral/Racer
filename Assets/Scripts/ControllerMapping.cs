@@ -183,4 +183,100 @@ public class ControllerMapping : MonoBehaviour {
                 return false;
         }
     }
+
+#region Buttons
+    public bool GetADown()
+    {
+        switch (currentController)
+        {
+            case Controllers.Keyboard:
+                return Input.GetButtonDown("keyboard_Down");
+
+            case Controllers.ps4_controller:
+                return Input.GetButtonDown("ps4_X");
+
+            case Controllers.wireless_xbox_360_controller:
+                return Input.GetButtonDown("xbox_360_Wireless_A");
+            /*
+        case Controllers.wired_xbox_360_controller:
+            break;
+
+        case Controllers.xbox_one_controller:
+            break;*/
+            default:
+                return false;
+        }
+    }
+
+    public bool GetBDown()
+    {
+        switch (currentController)
+        {
+            case Controllers.Keyboard:
+                return Input.GetButtonDown("keyboard_Right");
+
+            case Controllers.ps4_controller:
+                return Input.GetButtonDown("ps4_Circle");
+
+            case Controllers.wireless_xbox_360_controller:
+                return Input.GetButtonDown("xbox_360_Wireless_B");
+            /*
+        case Controllers.wired_xbox_360_controller:
+            break;
+
+        case Controllers.xbox_one_controller:
+            break;*/
+            default:
+                return false;
+        }
+    }
+
+    public bool GetYDown()
+    {
+        switch (currentController)
+        {
+            case Controllers.Keyboard:
+                return Input.GetButtonDown("keyboard_Up");
+
+            case Controllers.ps4_controller:
+                return Input.GetButtonDown("ps4_Triangle");
+
+            case Controllers.wireless_xbox_360_controller:
+                return Input.GetButtonDown("xbox_360_Wireless_Y");
+            /*
+        case Controllers.wired_xbox_360_controller:
+            break;
+
+        case Controllers.xbox_one_controller:
+            break;*/
+            default:
+                return false;
+        }
+    }
+
+    public bool GetXDown()
+    {
+        switch (currentController)
+        {
+            case Controllers.Keyboard:
+                return Input.GetButtonDown("keyboard_Left");
+
+            case Controllers.ps4_controller:
+                return Input.GetButtonDown("ps4_Square");
+
+            case Controllers.wireless_xbox_360_controller:
+                return Input.GetButtonDown("xbox_360_Wireless_X");
+            /*
+        case Controllers.wired_xbox_360_controller:
+            break;
+
+        case Controllers.xbox_one_controller:
+            break;*/
+            default:
+                return false;
+        }
+    }
+
+
+#endregion
 }

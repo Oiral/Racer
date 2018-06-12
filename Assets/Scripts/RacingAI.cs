@@ -42,6 +42,7 @@ public class RacingAI : MonoBehaviour {
             ApplySteering();
             Drive();
             CheckWaypoint();
+            Debug.DrawRay(transform.position, nodes[currentNode].transform.position - transform.position);
         }
     }
 
