@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 37b924114d6758a4aabf4072e7fab84e
+timeCreated: 1528930236
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: BikeMan1
+    100004: CntEngTwistCntrl
+    100006: DriveCntrl
+    100008: DriveJnt1
+    100010: DriveJnt2
+    100012: DriveJnt3Tip
+    100014: EngFlapCntrl1
+    100016: EngFlapCntrl10
+    100018: EngFlapCntrl2
+    100020: EngFlapCntrl3
+    100022: EngFlapCntrl4
+    100024: EngFlapCntrl5
+    100026: EngFlapCntrl6
+    100028: EngFlapCntrl7
+    100030: EngFlapCntrl8
+    100032: EngFlapCntrl9
+    100034: EngFlapJnt1
+    100036: EngFlapJnt10
+    100038: EngFlapJnt10Tip
+    100040: EngFlapJnt1Tip
+    100042: EngFlapJnt2
+    100044: EngFlapJnt2Tip
+    100046: EngFlapJnt3
+    100048: EngFlapJnt3Tip
+    100050: EngFlapJnt4
+    100052: EngFlapJnt4Tip
+    100054: EngFlapJnt5
+    100056: EngFlapJnt5Tip
+    100058: EngFlapJnt6
+    100060: EngFlapJnt6Tip
+    100062: EngFlapJnt7
+    100064: EngFlapJnt7Tip
+    100066: EngFlapJnt8
+    100068: EngFlapJnt8Tip
+    100070: EngFlapJnt9
+    100072: EngFlapJnt9Tip
+    100074: EngineCntrl
+    100076: EngineJnt1
+    100078: EngineJnt2
+    100080: EngineJntTip
+    100082: EngJigCntrl
+    100084: EngJigJntTip
+    100086: FanTwistCntrl
+    100088: FanTwistJnt1
+    100090: FrontCntrl
+    100092: FrontJnt
+    100094: FrontJntTip
+    100096: ikHandle1
+    100098: LftFanTwistJntTip
+    100100: RgtFanTwistJntTip
+    100102: RootCntrl
+    100104: RootJnt
+    100106: SeatCntrl
+    100108: SeatJnt
+    100110: SeatJntTip
+    100112: TankCntrl
+    100114: TankJnt
+    100116: WorldCntrl
+    400000: //RootNode
+    400002: BikeMan1
+    400004: CntEngTwistCntrl
+    400006: DriveCntrl
+    400008: DriveJnt1
+    400010: DriveJnt2
+    400012: DriveJnt3Tip
+    400014: EngFlapCntrl1
+    400016: EngFlapCntrl10
+    400018: EngFlapCntrl2
+    400020: EngFlapCntrl3
+    400022: EngFlapCntrl4
+    400024: EngFlapCntrl5
+    400026: EngFlapCntrl6
+    400028: EngFlapCntrl7
+    400030: EngFlapCntrl8
+    400032: EngFlapCntrl9
+    400034: EngFlapJnt1
+    400036: EngFlapJnt10
+    400038: EngFlapJnt10Tip
+    400040: EngFlapJnt1Tip
+    400042: EngFlapJnt2
+    400044: EngFlapJnt2Tip
+    400046: EngFlapJnt3
+    400048: EngFlapJnt3Tip
+    400050: EngFlapJnt4
+    400052: EngFlapJnt4Tip
+    400054: EngFlapJnt5
+    400056: EngFlapJnt5Tip
+    400058: EngFlapJnt6
+    400060: EngFlapJnt6Tip
+    400062: EngFlapJnt7
+    400064: EngFlapJnt7Tip
+    400066: EngFlapJnt8
+    400068: EngFlapJnt8Tip
+    400070: EngFlapJnt9
+    400072: EngFlapJnt9Tip
+    400074: EngineCntrl
+    400076: EngineJnt1
+    400078: EngineJnt2
+    400080: EngineJntTip
+    400082: EngJigCntrl
+    400084: EngJigJntTip
+    400086: FanTwistCntrl
+    400088: FanTwistJnt1
+    400090: FrontCntrl
+    400092: FrontJnt
+    400094: FrontJntTip
+    400096: ikHandle1
+    400098: LftFanTwistJntTip
+    400100: RgtFanTwistJntTip
+    400102: RootCntrl
+    400104: RootJnt
+    400106: SeatCntrl
+    400108: SeatJnt
+    400110: SeatJntTip
+    400112: TankCntrl
+    400114: TankJnt
+    400116: WorldCntrl
+    4300000: BikeMan1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: BikeMan1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 096f28370a954894fbb588b59a27eccd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: edc4d69e157873640857382eba53576d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
