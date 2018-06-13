@@ -9,7 +9,7 @@ public class CheckPointScript : MonoBehaviour {
 
     public List<GameObject> RacerHasPassed;
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         BoxCollider col = GetComponent<BoxCollider>();
         Gizmos.matrix = transform.localToWorldMatrix;

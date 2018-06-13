@@ -169,7 +169,7 @@ public class DistanceTrackerScript : MonoBehaviour {
         float playerDistance = player.GetComponent<DistanceTrackerScript>().totalDistance;
 
         distanceToPlayer = playerDistance - totalDistance;
-        Debug.Log(distanceToPlayer);
+        //Debug.Log(distanceToPlayer);
 
     }
 }

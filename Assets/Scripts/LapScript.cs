@@ -18,8 +18,6 @@ public class LapScript : MonoBehaviour {
 
     public static UnityEvent playerNextLap = new UnityEvent();
 
-    GameObject thingHitCol;
-
     private void OnDrawGizmosSelected()
     {
         BoxCollider col = GetComponent<BoxCollider>();
@@ -57,7 +55,6 @@ public class LapScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        thingHitCol = other.gameObject;
 
         //Check if its the player
         if (other.CompareTag("Player"))
@@ -93,22 +90,27 @@ public class LapScript : MonoBehaviour {
             
         }else if (other.CompareTag("AI"))
         {
-            if (raceGoing)
-            {
-                for (int i = 0; i < checkPoints.Count; i++)
-                {
-
-                    if (checkPoints[i].RacerHasPassed.Contains(other.gameObject))
-                    {
-                        checkPoints[i].RacerHasPassed.Remove(other.gameObject);
-                    }
-                }
-
-                other.gameObject.GetComponent<DistanceTrackerScript>().NextLap();
-            }
+            AIPassedStart(other.gameObject);
         }
         
         
+    }
+
+    public void AIPassedStart(GameObject AI)
+    {
+        if (raceGoing)
+        {
+            for (int i = 0; i < checkPoints.Count; i++)
+            {
+
+                if (checkPoints[i].RacerHasPassed.Contains(AI.gameObject))
+                {
+                    checkPoints[i].RacerHasPassed.Remove(AI.gameObject);
+                }
+            }
+
+            AI.gameObject.GetComponent<DistanceTrackerScript>().NextLap();
+        }
     }
 
     private void NextLap()
