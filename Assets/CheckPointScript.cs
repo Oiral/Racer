@@ -5,8 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class CheckPointScript : MonoBehaviour {
 
-    public bool playerHasPassed;
+    //public bool playerHasPassed;
 
+    public List<GameObject> RacerHasPassed;
 
     private void OnDrawGizmosSelected()
     {
@@ -20,13 +21,21 @@ public class CheckPointScript : MonoBehaviour {
 
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
+        /*
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player Passed");
             playerHasPassed = true;
+        }
+        */
+        if (other.CompareTag("AI") || other.CompareTag("Player"))
+        {
+            if (!RacerHasPassed.Contains(other.gameObject))
+            {
+                RacerHasPassed.Add(other.gameObject);
+            }
         }
     }
 }
