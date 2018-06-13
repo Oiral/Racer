@@ -11,6 +11,7 @@ public class BoostScript : MonoBehaviour {
             HoverCarScript hoverScript = other.gameObject.GetComponent<HoverCarScript>();
 
             hoverScript.forwardAcl = 400;
+            hoverScript.boosting = true;
         }
     }
 
@@ -21,6 +22,7 @@ public class BoostScript : MonoBehaviour {
             HoverCarScript hoverScript = other.gameObject.GetComponent<HoverCarScript>();
 
             hoverScript.forwardAcl = 250;
+            hoverScript.boosting = false;
         }
     }
 }

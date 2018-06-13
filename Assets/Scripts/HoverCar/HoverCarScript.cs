@@ -41,6 +41,7 @@ public class HoverCarScript : MonoBehaviour {
     public float animTurnSmooth;
     Animator anim;
     float turnAnimVel;
+    public bool boosting;
     
     void Start () {
         anim = GetComponentInChildren<Animator>();
@@ -72,11 +73,16 @@ public class HoverCarScript : MonoBehaviour {
             currTurn = 0f;
             float turnAxis = ControllerMapping.instance.HorizontalMovement();
 
+
+            //Animation
             float animationTurn = anim.GetFloat("Turning");
 
             animationTurn = Mathf.SmoothDamp(animationTurn, turnAxis, ref turnAnimVel, animTurnSmooth);
-
             anim.SetFloat("Turning", animationTurn);
+
+            anim.SetFloat("Speed", speed);
+            anim.SetBool("Boost", boosting);
+
             if (Mathf.Abs(turnAxis) > deadZone)
             {
                 currTurn = turnAxis;
