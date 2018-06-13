@@ -22,10 +22,11 @@ public class DistanceTrackerScript : MonoBehaviour {
 
     public float lapLength;
 
-    public int laps = 0;
-    public float totalDistance;
+    int laps = 0;
+    float totalDistance;
 
-    public GameObject player;
+    public float distanceToPlayer;
+    GameObject player;
 
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -61,7 +62,7 @@ public class DistanceTrackerScript : MonoBehaviour {
         distanceToCheckpoint = DistanceBetweenCheckpoints(currentCheckPoint,gameObject);
         CalculateDistanceAroundTrack();
 
-        totalDistance = distanceAroundTrack + ((laps + 1) * lapLength);
+        totalDistance = distanceAroundTrack + ((laps) * lapLength);
 
         if (distanceText != null)
         {
@@ -168,8 +169,8 @@ public class DistanceTrackerScript : MonoBehaviour {
     {
         float playerDistance = player.GetComponent<DistanceTrackerScript>().totalDistance;
 
-        float distancediff = playerDistance - totalDistance;
-        Debug.Log(distancediff);
+        distanceToPlayer = playerDistance - totalDistance;
+        Debug.Log(distanceToPlayer);
 
     }
 }
