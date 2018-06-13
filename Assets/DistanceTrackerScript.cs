@@ -22,7 +22,7 @@ public class DistanceTrackerScript : MonoBehaviour {
 
     public float lapLength;
 
-    int laps = 0;
+    public int laps = 0;
     float totalDistance;
 
     public float distanceToPlayer;
@@ -36,7 +36,6 @@ public class DistanceTrackerScript : MonoBehaviour {
 
         targetCheck = checkPoints[0].gameObject;
         checkingForPoints = true;
-        LapScript.playerNextLap.AddListener(NextLap);
     }
 
     void CalculateLapLength()
@@ -53,7 +52,7 @@ public class DistanceTrackerScript : MonoBehaviour {
     {
         if (checkingForPoints)
         {
-            if (checkPoints[currentCheckPoint].playerHasPassed)
+            if (checkPoints[currentCheckPoint].RacerHasPassed.Contains(gameObject))
             {
                 NextCheckPoint();
             }
@@ -92,7 +91,7 @@ public class DistanceTrackerScript : MonoBehaviour {
         }
     }
 
-    void NextLap()
+    public void NextLap()
     {
         laps += 1;
         checkingForPoints = true;

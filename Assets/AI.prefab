@@ -434,6 +434,8 @@ MonoBehaviour:
   distanceAroundTrack: 0
   distanceText: {fileID: 0}
   lapLength: 0
+  laps: 0
+  distanceToPlayer: 0
 --- !u!114 &114671785254485244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -448,6 +450,7 @@ MonoBehaviour:
   track: {fileID: 0}
   hoverScript: {fileID: 0}
   steering: 0
+  paused: 0
 --- !u!114 &114812391047529004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -481,7 +484,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1244889680683778}
   m_Material: {fileID: 13400000, guid: a2b04a075cfa7e5429d698f6aa98083b, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1

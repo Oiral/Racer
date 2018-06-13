@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &80305105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &383848535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &516844817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1566,7 +1566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &588145598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1980,7 +1980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &736069461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &891437520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2613,7 +2613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &1387216141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2667,7 +2667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &1400617237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3774,7 +3774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &1953539740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4017,7 +4017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81c6327a0e8dc044876017f4a18f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHasPassed: 0
+  RacerHasPassed: []
 --- !u!65 &2073833508
 BoxCollider:
   m_ObjectHideFlags: 0

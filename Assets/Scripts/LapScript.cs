@@ -18,6 +18,7 @@ public class LapScript : MonoBehaviour {
 
     public static UnityEvent playerNextLap = new UnityEvent();
 
+    GameObject thingHitCol;
 
     private void OnDrawGizmosSelected()
     {
@@ -56,6 +57,8 @@ public class LapScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        thingHitCol = other.gameObject;
+
         //Check if its the player
         if (other.CompareTag("Player"))
         {
@@ -65,7 +68,7 @@ public class LapScript : MonoBehaviour {
             for (int i = 0; i < checkPoints.Count; i++)
             {
                 
-                if (checkPoints[i].playerHasPassed == false)
+                if (checkPoints[i].RacerHasPassed.Contains(other.gameObject) == false)
                 {
                     //only needs to update if a player has missed a check point
                     missedCheckPoint = true;
@@ -77,7 +80,8 @@ public class LapScript : MonoBehaviour {
             {
                 if (missedCheckPoint == false)
                 {
-                    playerNextLap.Invoke();
+                    other.gameObject.GetComponent<DistanceTrackerScript>().NextLap();
+                    NextLap();
                 }
             }
             else
@@ -87,7 +91,23 @@ public class LapScript : MonoBehaviour {
             }
             //If the player has gone through every checkpoint
             
+        }else if (other.CompareTag("AI"))
+        {
+            if (raceGoing)
+            {
+                for (int i = 0; i < checkPoints.Count; i++)
+                {
+
+                    if (checkPoints[i].RacerHasPassed.Contains(other.gameObject))
+                    {
+                        checkPoints[i].RacerHasPassed.Remove(other.gameObject);
+                    }
+                }
+
+                other.gameObject.GetComponent<DistanceTrackerScript>().NextLap();
+            }
         }
+        
         
     }
 
@@ -110,7 +130,7 @@ public class LapScript : MonoBehaviour {
         //Set each checkpoint to have missed the player
         for (int i = 0; i < checkPoints.Count; i++)
         {
-            checkPoints[i].playerHasPassed = false;
+            checkPoints[i].RacerHasPassed.Remove(GameObject.FindGameObjectWithTag("Player"));
         }
     }
 
