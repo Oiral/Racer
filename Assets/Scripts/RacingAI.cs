@@ -50,6 +50,12 @@ public class RacingAI : MonoBehaviour {
             CheckWaypoint();
             Debug.DrawRay(transform.position, nodes[currentNode].transform.position - transform.position);
         }
+
+        //Debug.Log(distanceTracker.distanceToPlayer);
+        if (distanceTracker.distanceToPlayer > 200)
+        {
+            ForceNextWayPoint();
+        }
     }
 
     void ApplySteering()
@@ -107,6 +113,41 @@ public class RacingAI : MonoBehaviour {
             else
             {
                 currentNode++;
+            }
+        }
+    }
+
+    void ForceNextWayPoint()
+    {
+        Debug.Log("Force Next Waypoint");
+        if (currentNode == nodes.Count - 1)
+        {
+            currentNode = 0;
+            Debug.Log("Lap?");
+            GameObject.FindGameObjectWithTag("Start Line").GetComponent<LapScript>().AIPassedStart(gameObject);
+        }
+        else
+        {
+            currentNode++;
+        }
+        transform.position = nodes[currentNode].transform.position;
+        if (currentNode == nodes.Count - 1)
+        {
+            transform.LookAt(nodes[0]);
+        }
+        else
+        {
+            transform.LookAt(nodes[currentNode + 1]);
+        }
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.forward;
+
+
+        //Check if has passed a checkpoint by finding out if the current node is associated with that checkpoint
+        if (nodes[currentNode].GetComponent<NodeCheckpointScript>())
+        {
+            GameObject checkpoint = nodes[currentNode].GetComponent<NodeCheckpointScript>().checkpointRelation;
+            if (!checkpoint.GetComponent<CheckPointScript>().RacerHasPassed.Contains(gameObject)){
+                checkpoint.GetComponent<CheckPointScript>().RacerHasPassed.Add(gameObject);
             }
         }
     }
