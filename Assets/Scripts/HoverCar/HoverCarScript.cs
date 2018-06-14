@@ -72,19 +72,7 @@ public class HoverCarScript : MonoBehaviour {
             //Turning
             currTurn = 0f;
             float turnAxis = ControllerMapping.instance.HorizontalMovement();
-
-
-            //Animation
-            if (anim.isActiveAndEnabled)
-            {
-                float animationTurn = anim.GetFloat("Turning");
-
-                animationTurn = Mathf.SmoothDamp(animationTurn, turnAxis, ref turnAnimVel, animTurnSmooth);
-                anim.SetFloat("Turning", animationTurn);
-
-                anim.SetFloat("Speed", speed);
-                anim.SetBool("Boost", boosting);
-            }
+            
 
             if (Mathf.Abs(turnAxis) > deadZone)
             {
@@ -92,8 +80,24 @@ public class HoverCarScript : MonoBehaviour {
                 
             }
             currTurn = Mathf.Sign(currThrust) * currTurn;
+            RunAnimation();
         }
+        
 	}
+
+    void RunAnimation()
+    {
+        if (anim.isActiveAndEnabled)
+        {
+            float animationTurn = anim.GetFloat("Turning");
+
+            animationTurn = Mathf.SmoothDamp(animationTurn, currTurn, ref turnAnimVel, animTurnSmooth);
+            anim.SetFloat("Turning", animationTurn);
+
+            anim.SetFloat("Speed", speed);
+            anim.SetBool("Boost", boosting);
+        }
+    }
 
     private void FixedUpdate()
     {
