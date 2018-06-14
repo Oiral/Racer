@@ -75,13 +75,16 @@ public class HoverCarScript : MonoBehaviour {
 
 
             //Animation
-            float animationTurn = anim.GetFloat("Turning");
+            if (anim.isActiveAndEnabled)
+            {
+                float animationTurn = anim.GetFloat("Turning");
 
-            animationTurn = Mathf.SmoothDamp(animationTurn, turnAxis, ref turnAnimVel, animTurnSmooth);
-            anim.SetFloat("Turning", animationTurn);
+                animationTurn = Mathf.SmoothDamp(animationTurn, turnAxis, ref turnAnimVel, animTurnSmooth);
+                anim.SetFloat("Turning", animationTurn);
 
-            anim.SetFloat("Speed", speed);
-            anim.SetBool("Boost", boosting);
+                anim.SetFloat("Speed", speed);
+                anim.SetBool("Boost", boosting);
+            }
 
             if (Mathf.Abs(turnAxis) > deadZone)
             {

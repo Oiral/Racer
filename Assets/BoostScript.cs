@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class BoostScript : MonoBehaviour {
 
+    public float boostAmount;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<HoverCarScript>())
         {
             HoverCarScript hoverScript = other.gameObject.GetComponent<HoverCarScript>();
 
-            hoverScript.forwardAcl = 400;
+            hoverScript.forwardAcl = boostAmount;
             hoverScript.boosting = true;
         }
     }
