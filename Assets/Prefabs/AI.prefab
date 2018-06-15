@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114430783312354214}
   m_Layer: 9
   m_Name: AI
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,6 +407,7 @@ MonoBehaviour:
   - {fileID: 1953926179559530}
   - {fileID: 1289793536002804}
   animTurnSmooth: 0
+  boosting: 0
 --- !u!114 &114529226197783544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,6 +434,8 @@ MonoBehaviour:
   track: {fileID: 0}
   hoverScript: {fileID: 0}
   steering: 0
+  waypointDistCheck: 15
+  paused: 0
 --- !u!114 &114812391047529004
 MonoBehaviour:
   m_ObjectHideFlags: 1
