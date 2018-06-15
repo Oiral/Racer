@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
@@ -37,7 +38,10 @@ public class MenuScript : MonoBehaviour
 
     public CameraTrackingScript camTracking;
 
-    public GameObject settingsUI; 
+    public GameObject settingsUI;
+    [Header("Sliders")]
+    public Slider mainVolumeSlider;
+
 
     public bool inSettings;
 

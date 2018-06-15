@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SettingsScript : MonoBehaviour {
 
@@ -16,6 +17,11 @@ public class SettingsScript : MonoBehaviour {
 
     public AnimationCurve volumeCurve;
 
+    [Header("Sliders")]
+    public Slider mainVolumeSlider;
+    public Slider effectsSlider;
+    public Slider musicSlider;
+
     [Space]
     public AudioMixer audioMixer;
 
@@ -25,6 +31,11 @@ public class SettingsScript : MonoBehaviour {
         audioMixer.GetFloat("Master Volume", out MasterVolume);
         audioMixer.GetFloat("Effects Volume",  out EffectsVolume);
         audioMixer.GetFloat("Music Volume", out MusicVolume);
+
+        mainVolumeSlider.value = MasterVolume;
+        effectsSlider.value = EffectsVolume;
+        musicSlider.value = MusicVolume;
+
     }
 
     public void UpdateMasterVolume()
@@ -34,6 +45,8 @@ public class SettingsScript : MonoBehaviour {
         {
             MasterVolume = minVol;
         }
+
+        mainVolumeSlider.value = MasterVolume;
 
         audioMixer.SetFloat("Master Volume", MasterVolume);
     }
@@ -46,6 +59,8 @@ public class SettingsScript : MonoBehaviour {
             EffectsVolume = minVol;
         }
 
+        effectsSlider.value = EffectsVolume;
+
         audioMixer.SetFloat("Effects Volume", EffectsVolume);
     }
 
@@ -57,9 +72,31 @@ public class SettingsScript : MonoBehaviour {
             MusicVolume = minVol;
         }
 
+        musicSlider.value = MusicVolume;
+
         audioMixer.SetFloat("Music Volume", MusicVolume);
     }
 
+    public void UpdateMasterVolumeSlider()
+    {
+        MasterVolume = mainVolumeSlider.value;
+
+        audioMixer.SetFloat("Master Volume", MasterVolume);
+    }
+
+    public void UpdateEffectsVolumeSlider()
+    {
+        EffectsVolume = effectsSlider.value;
+
+        audioMixer.SetFloat("Effects Volume", EffectsVolume);
+    }
+
+    public void UpdateMusicVolumeSlider()
+    {
+        MusicVolume = musicSlider.value;
+
+        audioMixer.SetFloat("Music Volume", MusicVolume);
+    }
 
 
 }

@@ -18,6 +18,11 @@ public class LapScript : MonoBehaviour {
 
     public static UnityEvent playerNextLap = new UnityEvent();
 
+    [Header("Finish UI")]
+    public GameObject finishUI;
+    public GameObject winPanel;
+    public GameObject losePanel;
+
     private void OnDrawGizmosSelected()
     {
         BoxCollider col = GetComponent<BoxCollider>();
@@ -50,6 +55,13 @@ public class LapScript : MonoBehaviour {
         {
             //Add to the lap timer every frame when the race is running
             lapTimer += Time.deltaTime;
+
+            //Check if the lap is the last lap
+            if (lapCount >= maxlaps)
+            {
+                //Finish the race
+                FinishLap();
+            }
         }
 	}
 
@@ -115,12 +127,7 @@ public class LapScript : MonoBehaviour {
 
     private void NextLap()
     {
-        //Check if the lap is the last lap
-        if (lapCount >= maxlaps)
-        {
-            //Finish the race
-            FinishLap();
-        }
+        
 
         Debug.Log("Lap number: " + lapCount + " | Lap Time: " + lapTimer);
 
@@ -138,8 +145,31 @@ public class LapScript : MonoBehaviour {
 
     private void FinishLap()
     {
-        Debug.Log("You finished!");
-        Debug.Break();
+        //Debug.Log("Finish");
+        float scale = Time.timeScale;
+        scale -= 0.005f;
+        scale = Mathf.Clamp(scale, 0, 1);
+
+
+        Time.timeScale = scale;
+        if (finishUI != null)
+        {
+            //finishUI.SetActive(true);
+            //Check if the player won
+            if (GetComponent<PositionTracker>().Racers[0].CompareTag("Player"))
+            {
+                winPanel.SetActive(true);
+                Debug.Log("Win");
+            }
+            else
+            {
+                Debug.Log("Lose");
+                losePanel.SetActive(false);
+            }
+            //Make sure the positions cant change again
+            finishUI = null;
+        }
+        //Debug.Break();
     }
 
 }
