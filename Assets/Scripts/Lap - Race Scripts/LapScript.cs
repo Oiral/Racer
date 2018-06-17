@@ -164,7 +164,7 @@ public class LapScript : MonoBehaviour {
             else
             {
                 Debug.Log("Lose");
-                losePanel.SetActive(false);
+                losePanel.SetActive(true);
             }
             //Make sure the positions cant change again
             finishUI = null;
