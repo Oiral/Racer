@@ -3,7 +3,7 @@
 // Shader created with Shader Forge v1.38 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:1,spxs:False,tesm:0,olmd:0,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:False,rfrpn:Refraction,coma:15,ufog:False,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:True,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:4013,x:33059,y:32706,varname:node_4013,prsc:2|diff-7988-OUT,emission-8611-OUT,olwid-3276-OUT,olcol-3235-RGB;n:type:ShaderForge.SFN_FragmentPosition,id:4762,x:32313,y:33096,varname:node_4762,prsc:2;n:type:ShaderForge.SFN_ViewPosition,id:6994,x:32313,y:32969,varname:node_6994,prsc:2;n:type:ShaderForge.SFN_Multiply,id:3276,x:32758,y:33025,varname:node_3276,prsc:2|A-7574-OUT,B-9345-OUT;n:type:ShaderForge.SFN_Slider,id:9345,x:32459,y:33236,ptovrint:False,ptlb:Outline Width,ptin:_OutlineWidth,varname:_OutlineWidth,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.01282051,max:0.5;n:type:ShaderForge.SFN_Distance,id:7574,x:32575,y:33025,varname:node_7574,prsc:2|A-6994-XYZ,B-4762-XYZ;n:type:ShaderForge.SFN_Color,id:3235,x:32799,y:33259,ptovrint:False,ptlb:Outline Color,ptin:_OutlineColor,varname:_OutlineColor,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0,c2:0,c3:0,c4:1;n:type:ShaderForge.SFN_Color,id:9645,x:32401,y:32550,ptovrint:False,ptlb:_MainColor,ptin:__MainColor,varname:__MainColor,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.7279412,c2:0.7186388,c3:0.3907331,c4:1;n:type:ShaderForge.SFN_Multiply,id:8611,x:32815,y:32816,varname:node_8611,prsc:2|A-7988-OUT,B-7584-OUT;n:type:ShaderForge.SFN_Slider,id:7584,x:32451,y:32913,ptovrint:False,ptlb:Emissive Amount,ptin:_EmissiveAmount,varname:_EmissiveAmount,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_VertexColor,id:1439,x:32313,y:32746,varname:node_1439,prsc:2;n:type:ShaderForge.SFN_Multiply,id:7988,x:32622,y:32664,varname:node_7988,prsc:2|A-9645-RGB,B-1439-RGB;proporder:9645-9345-3235-7584;pass:END;sub:END;*/
+/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:1,spmd:1,trmd:1,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:0,culm:0,bsrc:0,bdst:7,dpts:2,wrdp:False,dith:0,atcv:False,rfrpo:False,rfrpn:Refraction,coma:15,ufog:False,aust:True,igpj:True,qofs:0,qpre:3,rntp:2,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:True,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:True,fnsp:True,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:4013,x:33059,y:32706,varname:node_4013,prsc:2|diff-7988-OUT,emission-8611-OUT,olwid-3276-OUT,olcol-3235-RGB;n:type:ShaderForge.SFN_FragmentPosition,id:4762,x:32147,y:33148,varname:node_4762,prsc:2;n:type:ShaderForge.SFN_ViewPosition,id:6994,x:32147,y:33021,varname:node_6994,prsc:2;n:type:ShaderForge.SFN_Multiply,id:3276,x:32592,y:33077,varname:node_3276,prsc:2|A-7574-OUT,B-9345-OUT;n:type:ShaderForge.SFN_Slider,id:9345,x:32293,y:33288,ptovrint:False,ptlb:Outline Width,ptin:_OutlineWidth,varname:_OutlineWidth,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.01282051,max:0.5;n:type:ShaderForge.SFN_Distance,id:7574,x:32409,y:33077,varname:node_7574,prsc:2|A-6994-XYZ,B-4762-XYZ;n:type:ShaderForge.SFN_Color,id:3235,x:32618,y:33361,ptovrint:False,ptlb:Outline Color,ptin:_OutlineColor,varname:_OutlineColor,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0,c2:0,c3:0,c4:1;n:type:ShaderForge.SFN_Color,id:9645,x:32167,y:32496,ptovrint:False,ptlb:_MainColor,ptin:__MainColor,varname:__MainColor,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.7279412,c2:0.7186388,c3:0.3907331,c4:1;n:type:ShaderForge.SFN_Multiply,id:8611,x:32581,y:32781,varname:node_8611,prsc:2|A-7988-OUT,B-7584-OUT;n:type:ShaderForge.SFN_Slider,id:7584,x:32217,y:32878,ptovrint:False,ptlb:Emissive Amount,ptin:_EmissiveAmount,varname:_EmissiveAmount,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_VertexColor,id:1439,x:32079,y:32711,varname:node_1439,prsc:2;n:type:ShaderForge.SFN_Multiply,id:7988,x:32388,y:32629,varname:node_7988,prsc:2|A-9645-RGB,B-1439-RGB;proporder:9645-9345-3235-7584;pass:END;sub:END;*/
 
 Shader "Shader Forge/Outline Particle" {
     Properties {
@@ -14,7 +14,9 @@ Shader "Shader Forge/Outline Particle" {
     }
     SubShader {
         Tags {
-            "RenderType"="Opaque"
+            "IgnoreProjector"="True"
+            "Queue"="Transparent"
+            "RenderType"="Transparent"
         }
         Pass {
             Name "Outline"
@@ -28,7 +30,7 @@ Shader "Shader Forge/Outline Particle" {
             #include "UnityCG.cginc"
             #pragma fragmentoption ARB_precision_hint_fastest
             #pragma only_renderers d3d9 d3d11 glcore gles 
-            #pragma target 3.0
+            #pragma target 2.0
             uniform float _OutlineWidth;
             uniform float4 _OutlineColor;
             struct VertexInput {
@@ -42,7 +44,8 @@ Shader "Shader Forge/Outline Particle" {
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                o.pos = UnityObjectToClipPos( float4(v.vertex.xyz + normalize(v.vertex)*(distance(_WorldSpaceCameraPos,mul(unity_ObjectToWorld, v.vertex).rgb)*_OutlineWidth),1) );
+                float node_3276 = (distance(_WorldSpaceCameraPos,mul(unity_ObjectToWorld, v.vertex).rgb)*_OutlineWidth);
+                o.pos = UnityObjectToClipPos( float4(v.vertex.xyz + normalize(v.vertex)*node_3276,1) );
                 return o;
             }
             float4 frag(VertexOutput i) : COLOR {
@@ -55,17 +58,20 @@ Shader "Shader Forge/Outline Particle" {
             Tags {
                 "LightMode"="ForwardBase"
             }
+            Blend One OneMinusSrcAlpha
+            ZWrite Off
             
-            
+            Stencil {
+                Ref 128
+            }
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             #define UNITY_PASS_FORWARDBASE
             #include "UnityCG.cginc"
-            #include "AutoLight.cginc"
-            #pragma multi_compile_fwdbase_fullshadows
+            #pragma multi_compile_fwdbase
             #pragma only_renderers d3d9 d3d11 glcore gles 
-            #pragma target 3.0
+            #pragma target 2.0
             uniform float4 _LightColor0;
             uniform float4 __MainColor;
             uniform float _EmissiveAmount;
@@ -79,7 +85,6 @@ Shader "Shader Forge/Outline Particle" {
                 float4 posWorld : TEXCOORD0;
                 float3 normalDir : TEXCOORD1;
                 float4 vertexColor : COLOR;
-                LIGHTING_COORDS(2,3)
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
@@ -88,7 +93,6 @@ Shader "Shader Forge/Outline Particle" {
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = UnityObjectToClipPos( v.vertex );
-                TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
             }
             float4 frag(VertexOutput i) : COLOR {
@@ -97,7 +101,7 @@ Shader "Shader Forge/Outline Particle" {
                 float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
                 float3 lightColor = _LightColor0.rgb;
 ////// Lighting:
-                float attenuation = LIGHT_ATTENUATION(i);
+                float attenuation = 1;
                 float3 attenColor = attenuation * _LightColor0.xyz;
 /////// Diffuse:
                 float NdotL = max(0.0,dot( normalDirection, lightDirection ));
@@ -121,7 +125,7 @@ Shader "Shader Forge/Outline Particle" {
                 "LightMode"="ForwardAdd"
             }
             Blend One One
-            
+            ZWrite Off
             
             CGPROGRAM
             #pragma vertex vert
@@ -129,9 +133,9 @@ Shader "Shader Forge/Outline Particle" {
             #define UNITY_PASS_FORWARDADD
             #include "UnityCG.cginc"
             #include "AutoLight.cginc"
-            #pragma multi_compile_fwdadd_fullshadows
+            #pragma multi_compile_fwdadd
             #pragma only_renderers d3d9 d3d11 glcore gles 
-            #pragma target 3.0
+            #pragma target 2.0
             uniform float4 _LightColor0;
             uniform float4 __MainColor;
             uniform float _EmissiveAmount;
@@ -173,7 +177,7 @@ Shader "Shader Forge/Outline Particle" {
                 float3 diffuse = directDiffuse * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse;
-                return fixed4(finalColor * 1,0);
+                return fixed4(finalColor,0);
             }
             ENDCG
         }

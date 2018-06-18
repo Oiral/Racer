@@ -40,6 +40,8 @@ public class DistanceTrackerScript : MonoBehaviour {
 
     void CalculateLapLength()
     {
+        lapLength += DistanceBetweenCheckpoints(0, startLine);
+
         for (int i = 1; i < checkPoints.Count; i++)
         {
             lapLength += DistanceBetweenCheckpoints(i,i-1);
