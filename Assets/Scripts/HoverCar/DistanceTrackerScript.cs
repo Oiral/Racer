@@ -23,7 +23,7 @@ public class DistanceTrackerScript : MonoBehaviour {
     public float lapLength;
 
     public int laps = 0;
-    float totalDistance;
+    public float totalDistance;
 
     public float distanceToPlayer;
     GameObject player;
@@ -74,6 +74,10 @@ public class DistanceTrackerScript : MonoBehaviour {
         {
             FindDistanceToPlayer();
         }
+        else
+        {
+            //Debug.Log(totalDistance);
+        }
 
     }
 
@@ -106,22 +110,26 @@ public class DistanceTrackerScript : MonoBehaviour {
     void CalculateDistanceAroundTrack()
     {
         //Debug.Log("Running?");
-        float distanceFromCheckpoint = 0;
+        float distanceBetweenCheckpoint = 0;
+
+        //check our current checkpoint distance
         if (currentCheckPoint == 0 && targetCheck != startLine)
         {
             //Check distance from start to check point 1
-            distanceFromCheckpoint = DistanceBetweenCheckpoints(currentCheckPoint, startLine);
+            distanceBetweenCheckpoint = DistanceBetweenCheckpoints(currentCheckPoint, startLine);
         }else if (targetCheck == startLine)
         {
             //Check the distance from last to start
-            distanceFromCheckpoint = DistanceBetweenCheckpoints(checkPoints.Count - 1, startLine);
+            distanceBetweenCheckpoint = DistanceBetweenCheckpoints(checkPoints.Count - 1, startLine);
         }
         else
         {
-            distanceFromCheckpoint = DistanceBetweenCheckpoints(currentCheckPoint, startLine);
+            distanceBetweenCheckpoint = DistanceBetweenCheckpoints(currentCheckPoint, startLine);
         }
 
-        distanceAroundTrack = distanceFromCheckpoint - distanceToCheckpoint;
+        distanceAroundTrack = distanceBetweenCheckpoint - distanceToCheckpoint;
+
+        //check previous checkpoint distance
         if (currentCheckPoint != 0)
         {
             //loop through all the checkpoints before the current one
@@ -130,14 +138,13 @@ public class DistanceTrackerScript : MonoBehaviour {
                 distanceAroundTrack += DistanceBetweenCheckpoints(i, i-1);
                 
             }
-        } else if (targetCheck == startLine)
+        }else if (targetCheck == startLine)
         {
-            //Debug.Log("Check Done");
             //loop through all the checkpoints before the current one
             for (int i = 1; i < checkPoints.Count; i++)
             {
-                //Debug.Log("Final checking");
                 distanceAroundTrack += DistanceBetweenCheckpoints(i, i - 1);
+
             }
         }
 

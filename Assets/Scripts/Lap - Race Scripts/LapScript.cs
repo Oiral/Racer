@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Analytics;
 
 [RequireComponent(typeof(BoxCollider))]
 public class LapScript : MonoBehaviour {
@@ -127,7 +128,11 @@ public class LapScript : MonoBehaviour {
 
     private void NextLap()
     {
-        
+        Analytics.CustomEvent("Lap_Completed", new Dictionary<string, object>
+        {
+            { "lap_Number", lapCount },
+            { "Lap_Time", lapTimer }
+        });
 
         Debug.Log("Lap number: " + lapCount + " | Lap Time: " + lapTimer);
 

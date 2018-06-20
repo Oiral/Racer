@@ -21,7 +21,7 @@ public class PositionTracker : MonoBehaviour {
 
     static int SortByDistance(GameObject p2, GameObject p1)
     {
-        return p1.GetComponent<DistanceTrackerScript>().distanceAroundTrack.CompareTo((p2.GetComponent<DistanceTrackerScript>().distanceAroundTrack));
+        return p1.GetComponent<DistanceTrackerScript>().totalDistance.CompareTo((p2.GetComponent<DistanceTrackerScript>().totalDistance));
     }
 
 

@@ -51,11 +51,13 @@ public class RacingAI : MonoBehaviour {
             Debug.DrawRay(transform.position, nodes[currentNode].transform.position - transform.position);
         }
 
+        //getting rid of rubberBanding
         //Debug.Log(distanceTracker.distanceToPlayer);
+        /*
         if (distanceTracker.distanceToPlayer > 200)
         {
             ForceNextWayPoint();
-        }
+        }*/
     }
 
     void ApplySteering()
@@ -64,7 +66,8 @@ public class RacingAI : MonoBehaviour {
         //Debug.Log(relativeVector);
         steering = (relativeVector.x / relativeVector.magnitude);
 
-        steering = steering * (1 + (distanceTracker.distanceToPlayer / 10000));
+        //getting rid of rubberBanding
+        //steering = steering * (1 + (distanceTracker.distanceToPlayer / 10000));
         hoverScript.currTurn = steering;
     }
 
@@ -76,7 +79,8 @@ public class RacingAI : MonoBehaviour {
 
         float thrust = Mathf.Lerp(hoverScript.currThrust, ((inverseSteering + (absSteering / 2)) * hoverScript.forwardAcl * 1.15f), 0.05f);
 
-        thrust = thrust * (1 + (distanceTracker.distanceToPlayer / 10000));
+        //getting rid of rubberBanding
+        //thrust = thrust * (1 + (distanceTracker.distanceToPlayer / 10000));
 
         hoverScript.currThrust = thrust;
         //hoverScript.currThrust = Mathf.Lerp(hoverScript.currThrust, (((1 - (Mathf.Sign(steering) * steering)) + (Mathf.Sign(steering) * steering)/4) * hoverScript.forwardAcl * 1.01f), 0.05f);
@@ -100,9 +104,12 @@ public class RacingAI : MonoBehaviour {
 
         zeroPos.y = zeroNodePos.y = 0;
 
+        //getting rid of rubberBanding
+        /*
         waypointDistCheck = waypointDistCheck * (1 + distanceTracker.distanceToPlayer / 100000);
 
-        waypointDistCheck = Mathf.Clamp(waypointDistCheck, 1.5f, 15f);
+        waypointDistCheck = Mathf.Clamp(waypointDistCheck, 1.5f, 15f);*/
+        waypointDistCheck = 15f;
 
         if (Vector3.Distance(zeroPos, zeroNodePos) < waypointDistCheck)
         {
