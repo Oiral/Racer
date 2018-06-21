@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 public class PlayerMaterialSelectorScript : MonoBehaviour {
 
@@ -14,7 +15,8 @@ public class PlayerMaterialSelectorScript : MonoBehaviour {
             instance = this;
         }else if (instance != this)
         {
-            Destroy(gameObject);
+            Destroy(instance.gameObject);
+            instance = this;
         }
 
         DontDestroyOnLoad(gameObject);
@@ -22,7 +24,6 @@ public class PlayerMaterialSelectorScript : MonoBehaviour {
     }
 
     public Material selectedMat;
-
 
     private void LevelLoad(Scene scene, LoadSceneMode mode)
     {
@@ -41,6 +42,7 @@ public class PlayerMaterialSelectorScript : MonoBehaviour {
             }
 
             //remove this gameobject
+            SceneManager.sceneLoaded -= LevelLoad;
             Destroy(gameObject);
         }else
         {
@@ -57,5 +59,11 @@ public class PlayerMaterialSelectorScript : MonoBehaviour {
     {
         SceneManager.LoadScene(2);
     }
+
+    public void SelectedSkin(string nameOfSkin)
+    {
+        Analytics.CustomEvent("Selected Skin - " + nameOfSkin);
+    }
+
 
 }

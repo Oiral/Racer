@@ -128,10 +128,14 @@ public class LapScript : MonoBehaviour {
 
     private void NextLap()
     {
+        PositionTracker tracker = GameObject.FindGameObjectWithTag("Start Line").GetComponent<PositionTracker>();
+        int playerPos = tracker.Racers.IndexOf(GameObject.FindGameObjectWithTag("Player"));
+
         Analytics.CustomEvent("Lap_Completed", new Dictionary<string, object>
         {
             { "lap_Number", lapCount },
-            { "Lap_Time", lapTimer }
+            { "Lap_Time", lapTimer },
+            { "Position", playerPos }
         });
 
         Debug.Log("Lap number: " + lapCount + " | Lap Time: " + lapTimer);

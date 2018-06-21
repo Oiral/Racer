@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 public class MenuScript : MonoBehaviour
 {
@@ -10,16 +11,19 @@ public class MenuScript : MonoBehaviour
     public void LoadVechicleSelection()
     {
         SceneManager.LoadScene(1);
+        Analytics.CustomEvent("Loaded Vehicle Selection Track");
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
+        Analytics.CustomEvent("Loaded Main Menu Track");
     }
 
     public void LoadLevel(int levelNumber)
     {
         SceneManager.LoadScene(levelNumber);
+        Analytics.CustomEvent("Loaded Race Track");
     }
 
     public void Quit()

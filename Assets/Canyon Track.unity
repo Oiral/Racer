@@ -2290,8 +2290,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 213338715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 703.5, y: 397.5, z: 0}
-  m_LocalScale: {x: 1.75875, y: 1.75875, z: 1.75875}
+  m_LocalPosition: {x: 594.5, y: 291, z: 0}
+  m_LocalScale: {x: 1.48625, y: 1.48625, z: 1.48625}
   m_Children:
   - {fileID: 1583182303}
   - {fileID: 1201827895}
@@ -6530,7 +6530,7 @@ Prefab:
     - target: {fileID: 114485310168917724, guid: ddd49bd670de14144a3f30728614e98d,
         type: 2}
       propertyPath: maxlaps
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114231757134402888, guid: ddd49bd670de14144a3f30728614e98d,
         type: 2}
